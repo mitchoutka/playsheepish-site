@@ -1,0 +1,1345 @@
+<title>Sheepish — Play Your Way Closer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sheepish is a couples app built around fifteen short games. Five minutes, a real conversation, and a reason to keep showing up for each other.">
+<meta name="theme-color" content="#FBF4E6">
+
+<!-- Link preview. Image URLs are ABSOLUTE on the live domain on purpose:
+     scrapers do not reliably resolve a relative path. -->
+<meta property="og:site_name" content="Sheepish">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sheepish — Play Your Way Closer">
+<meta property="og:description" content="A couples app built around fifteen short games. Five minutes, a real conversation, and a reason to keep showing up for each other.">
+<meta property="og:image" content="https://playsheepish.com/images/web/og-card.jpg">
+<meta property="og:url" content="https://playsheepish.com/">
+<link rel="canonical" href="https://playsheepish.com/">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Theo the lamb flying a red biplane over green hills, beside the words Play Your Way Closer.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sheepish — Play Your Way Closer">
+<meta name="twitter:description" content="A couples app built around fifteen short games. Five minutes, a real conversation, and a reason to keep showing up for each other.">
+<meta name="twitter:image" content="https://playsheepish.com/images/web/og-card.jpg">
+<style>
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    src: url(data:font/woff;base64,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) format('woff');
+  }
+  :root {
+    --cream: #FBF4E6;
+    --cream-deep: #F6ECD8;
+    --ink: #33241A;
+    --ink-soft: #6B584A;
+    --brown: #5A3217;
+    --rose: #E0326E;
+    --rose-soft: #FBE3EB;
+    --mint: #E9F3E4;
+    --butter: #FBF0D9;
+    --green: #3E7C4F;
+    --card: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+    overflow-x: clip;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .display, h1, h2, .tile h3 {
+    font-family: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+    font-weight: 900;
+  }
+
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+  section { position: relative; }
+
+  h2 {
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .lede { color: var(--ink-soft); font-size: 17px; margin-top: 14px; text-wrap: pretty; }
+
+  /* ---------- blink ---------- */
+  .blink { position: relative; display: block; }
+  .blink img { width: 100%; }
+  .blink .closed {
+    position: absolute; inset: 0; opacity: 0;
+    animation: blinkshut var(--blink-dur, 4.8s) infinite;
+    animation-delay: var(--blink-delay, 0s);
+  }
+  @keyframes blinkshut { 0%, 94% { opacity: 0 } 95%, 98% { opacity: 1 } 100% { opacity: 0 } }
+  .fly { display: block; animation: swoop 0.9s cubic-bezier(0.5, 0, 0.2, 1) 0.25s both; }
+  .fly img { width: 100%; }
+  @keyframes swoop {
+    0% { transform: translate(150%, -230%) scale(0.22) rotate(-6deg); opacity: 0; }
+    30% { opacity: 1; }
+    100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
+  }
+  .bob { display: block; position: relative; animation: hoverbob 3.52s ease-in-out infinite; }
+  @keyframes hoverbob {
+    0%, 100% { transform: translateY(-4.5px); }
+    50% { transform: translateY(4.5px); }
+  }
+  .sky {
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 520px;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0; animation: skyfade 0.5s linear forwards;
+  }
+  @keyframes skyfade { to { opacity: 1; } }
+  .sky .sc {
+    position: absolute; left: -38%;
+    animation: cruise linear infinite;
+    will-change: transform;
+  }
+  @keyframes cruise { to { transform: translateX(145vw); } }
+  .sky .sc1 { width: 80px; top: 12px; opacity: 0.34; animation-duration: 16s; animation-delay: -3s; }
+  .sky .sc2 { width: 95px; top: 130px; opacity: 0.38; animation-duration: 13.5s; animation-delay: -9s; }
+  .sky .sc3 { width: 115px; top: 250px; opacity: 0.42; animation-duration: 11s; animation-delay: -6s; }
+  .sky .sc4 { width: 130px; top: 60px; opacity: 0.47; animation-duration: 9s; animation-delay: -2s; }
+  .sky .sc5 { width: 150px; top: 320px; opacity: 0.52; animation-duration: 7.5s; animation-delay: -5s; }
+  .sky .sc6 { width: 170px; top: 190px; opacity: 0.57; animation-duration: 6s; animation-delay: -1.5s; }
+  .sky .sc7 { width: 195px; top: 360px; opacity: 0.62; animation-duration: 5s; animation-delay: -3.8s; }
+  @media (prefers-reduced-motion: reduce) { .blink .closed, .fly, .bob, .sc, .shelf-track { animation: none; } .sky { opacity: 0; animation: none; } }
+
+  /* ---------- header ---------- */
+  header {
+    max-width: 640px; margin: 0 auto; padding: 20px 24px 0;
+    display: flex; align-items: center; justify-content: space-between;
+    position: relative; z-index: 20;
+  }
+  header .logo { width: 132px; }
+  .menu-btn {
+    background: none; border: none; cursor: pointer; padding: 10px;
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  .menu-btn span {
+    display: block; width: 26px; height: 3px; border-radius: 2px;
+    background: var(--ink);
+  }
+  .menu {
+    display: none;
+    position: absolute; top: 64px; right: 24px;
+    background: var(--card); border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(51, 36, 26, 0.16);
+    padding: 10px; min-width: 210px;
+  }
+  .menu.open { display: block; }
+  .menu a {
+    display: block; padding: 12px 16px; border-radius: 12px;
+    color: var(--ink); text-decoration: none; font-weight: 600; font-size: 16px;
+  }
+  .menu a:active, .menu a:hover { background: var(--cream); }
+  .menu a.dl { color: var(--rose); }
+
+  /* ---------- hero ---------- */
+  .hero { padding-top: 61px; }
+  .hero > .wrap { position: relative; z-index: 2; }
+  .hero h1 {
+    font-size: clamp(42px, 11.5vw, 62px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .hero .lede {
+    font-size: 18px; font-weight: 600; color: var(--ink);
+    max-width: 30ch; margin-top: 12px;
+  }
+
+  .hero-stage {
+    position: relative;
+    width: 100vw; margin-left: calc(50% - 50vw);
+    --hills-gap: 130px;
+    margin-top: 21px;
+  }
+  .stage-hills {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: calc(100% - var(--hills-gap));
+    object-fit: cover; object-position: center bottom;
+  }
+  .stage-fade {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 90px;
+    background: linear-gradient(var(--cream), rgba(251, 244, 230, 0));
+  }
+  .stage-curve {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    width: 170%;
+    height: 150px;
+    top: calc(100% - var(--hills-gap) - 65px);
+    background: var(--cream);
+    border-radius: 50%;
+  }
+  .plane-row {
+    position: relative; z-index: 1;
+    max-width: 640px; margin: -20px auto 0; padding: 0 0 0 24px;
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 6px;
+  }
+  .plane-row img.script { width: 23%; margin-bottom: 14px; }
+  .plane-row .plane { width: 44%; }
+  .badge-row { position: relative; z-index: 1; display: flex; justify-content: center; margin-top: 14px; }
+
+  .appstore {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #000; color: #fff; text-decoration: none;
+    border-radius: 12px; padding: 10px 20px;
+  }
+  .appstore .apple { font-size: 28px; line-height: 1; }
+  .appstore small { display: block; font-size: 11px; opacity: 0.85; }
+  .appstore span { font-size: 18px; font-weight: 600; line-height: 1.15; }
+
+  .phone-crop {
+    position: relative; z-index: 1;
+    height: 487px; overflow: hidden; margin-top: 16px;
+  }
+  .phone-wave {
+    position: absolute; bottom: -1px; left: 0;
+    width: 100%; height: 100px; z-index: 2;
+  }
+  .phone-wave svg { display: block; width: 100%; height: 100%; }
+  .hero-stage .phone {
+    position: relative; z-index: 1;
+    width: 312px; margin: 0 auto;
+  }
+
+  /* ---------- loud ---------- */
+  .loud { padding: 28px 0 0; }
+  /* the art is an opaque cream paper strip, a touch warmer than the page
+     (its corners measure ~251,243,223 against the page's 251,244,230), so the
+     webp carries a smoothstep alpha feather on all four edges. Without it the
+     rectangle's edge is visible against the cream. Same treatment as
+     cloud-cream-soft. */
+  /* full-bleed: the art is feathered on all four edges, so running it past the
+     wrap's 24px gutters just fades it out at the screen edges. Native art is
+     2000px, so nothing upscales until the viewport passes that. */
+  .loud-doodles {
+    display: block;
+    /* the base img{max-width:100%} would cap this at the wrap, so lift it */
+    width: 100vw; max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-top: -10px;   /* 14px -> -1 -> -10, nudged up 15 then 9 */
+    margin-right: 0; margin-bottom: 0;
+  }
+  /* one cream cloud at each edge. Same art both sides, so they are deliberately
+     NOT a mirrored pair at matching size: different width, opacity and vertical
+     offset, or it reads as a butterfly across the section. The left one is
+     flipped so cloud-cream's hard vertical edge runs off-screen, which is the
+     only place that edge works. */
+  .loud-clouds { display: flex; justify-content: space-between; align-items: flex-start; margin: 8px -8px -44px; }
+  .lc { display: block; }
+  .lc-l { width: 132px; opacity: 0.62; transform: scaleX(-1); margin-top: 12px; }
+  .lc-r { width: 140px; opacity: 0.75; }
+  .loud-theo {
+    display: flex; align-items: flex-end; justify-content: center; gap: 8px;
+    padding: 51px 0 0; position: relative; z-index: 2; margin-bottom: -12px;
+  }
+  .loud-theo .theo { width: 58.3%; margin-right: -55px; }
+  .loud-theo img.script { width: calc(32.4% - 7px); margin-left: -65px; margin-bottom: 20px; }
+  .loud-heart { position: absolute; left: 40%; top: 79px; width: 20px; }
+
+  /* ---------- play chat grow repeat ---------- */
+  .pcgr {
+    padding: 56px 0 134px; text-align: center;
+    background: var(--cream-deep);
+    border-radius: 44px;
+    /* the game shelf now lives in here and its rows run the full panel width,
+       so without this the cards square off the 44px corners */
+    overflow: hidden;
+  }
+  .pcgr h2 { font-size: clamp(36px, 9.6vw, 53px); }
+  /* the cloud band scales with the screen so every phone gets the same skyline,
+     then freezes above 440px so desktop keeps its current sizes */
+  .pcgr-merge { position: relative; pointer-events: none; --u: min(1vw, 4.4px); height: calc(var(--u) * 20.5); }
+  .pcgr-merge img { position: absolute; }
+  .pcgr-merge .c-left  { left: 0; top: calc(var(--u) * -24.6); width: calc(var(--u) * 49.2); transform: scaleX(-1); }
+  .pcgr-merge .c-right { right: 0; top: calc(var(--u) * -16.9); width: calc(var(--u) * 58.5); }
+  .pcgr-merge .c-mid   { left: calc(var(--u) * 8.97); top: calc(var(--u) * -24.1); width: calc(var(--u) * 59.2); }
+  .pcgr-merge .c-mid-b { left: calc(var(--u) * 39.2); top: calc(var(--u) * -23.3); width: calc(var(--u) * 41.3); }
+  .pcgr-grid {
+    display: flex; gap: 14px; margin-top: 28px; text-align: left;
+    width: 100vw; margin-left: calc(50% - 50vw);
+    padding: 0 24px 12px;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .pcgr-grid::-webkit-scrollbar { display: none; }
+  .tile {
+    border-radius: 22px; padding: 20px 18px 18px;
+    display: flex; flex-direction: column;
+    flex: 0 0 74%; scroll-snap-align: center;
+  }
+  .tile h3 { font-size: 24px; }
+  .tile p { font-size: 13px; color: var(--ink-soft); margin: 4px 0 12px; min-height: 4em; }
+  .tile img { border-radius: 12px; }
+  .tile { position: relative; }
+  .tile .ticon { position: absolute; top: 18px; right: 16px; width: 26px; height: 26px; }
+  .tile.play { background: #EAF6E6; border: 1.5px solid #D6E9CE; }
+  .tile.chat { background: #FBE7EA; border: 1.5px solid #F3D2D9; }
+  .tile.grow { background: #FBF4DC; border: 1.5px solid #EFE2BC; }
+  .tile.repeat { background: #FBE7DC; border: 1.5px solid #F3D4C1; }
+  .pcgr-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+  .pcgr-dots span {
+    width: 8px; height: 8px; border-radius: 4px;
+    background: rgba(51, 36, 26, 0.22);
+    transition: all 0.25s ease;
+  }
+  .pcgr-dots span.on { width: 22px; background: var(--rose); }
+
+  /* ---------- five minutes ---------- */
+  .five { padding: 45px 0 0; position: relative; z-index: 2; }
+  .five h2 { font-size: clamp(38px, 10vw, 55px); }
+  .steps { margin-top: 28px; display: flex; flex-direction: column; gap: 22px; position: relative; }
+  .steps::before {
+    content: ""; position: absolute;
+    left: 22px; top: 22px; bottom: 22px; width: 2px;
+    background: rgba(51, 36, 26, 0.22);
+  }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step .n {
+    flex: none; width: 45px; height: 45px; border-radius: 50%;
+    border: 1.5px solid var(--ink); display: grid; place-items: center;
+    /* solid, not 60% white. Measured what that was actually rendering as over
+       the cream page and froze it, so the circles stay this colour instead of
+       shifting wherever the section's wave or gradient sits behind them. */
+    background: #FDFBF5; position: relative;
+    font-weight: 700; font-size: 15px;
+  }
+  .step h4 { font-size: 17px; font-weight: 700; }
+  .step p { font-size: 15px; color: var(--ink-soft); }
+  .five-visual {
+    position: relative;
+    width: 100vw; margin-left: calc(50% - 50vw);
+    margin-top: 11px; height: 575px;
+  }
+  .phone-wrap { position: relative; display: block; width: 69.3%; margin-left: 25px; margin-top: 88px; z-index: 1; }
+  .five-script { position: absolute; right: 14px; top: 185px; width: 20.7%; transform: rotate(-6deg); z-index: 2; }
+  .five-strokes { position: absolute; right: -6.9%; top: -8.6%; width: 21.7%; z-index: 2; }
+  .phone-wrap .five-phone { width: 100%; transform: rotate(-2deg); filter: drop-shadow(0 12px 20px rgba(51, 36, 26, 0.16)); }
+
+  /* ---------- testimonials ---------- */
+  .five-wave { position: absolute; bottom: -1px; left: 0; width: 100%; height: 164px; }
+  .five-wave svg { display: block; width: 100%; height: 100%; }
+  .peek-theo { position: absolute; right: -6px; top: -28px; width: 115px; z-index: 2; }
+  .quotes { padding: 100px 0 56px; background: var(--cream-deep); position: relative; }
+  .quotes h2 { font-size: clamp(41.4px, 11vw, 60.7px); }
+  .quotes .wrap { position: relative; z-index: 1; }
+  .quote-list { display: flex; flex-direction: column; gap: 14px; margin-top: 26px; }
+  .quote {
+    background: var(--card); border-radius: 20px; padding: 20px;
+    display: flex; gap: 16px; align-items: flex-start;
+    box-shadow: 0 2px 10px rgba(51, 36, 26, 0.06);
+  }
+  .quote .avatar {
+    flex: none; width: 74px; height: 74px; border-radius: 50%;
+    display: grid; place-items: center; font-weight: 700; font-size: 18px; color: #fff;
+  }
+  .quote blockquote { font-size: 15px; }
+  .quote .who { margin-top: 8px; font-size: 13px; font-weight: 700; }
+  .quote .meta { font-size: 12px; color: var(--ink-soft); }
+
+  /* ---------- theo ---------- */
+  .theo-sec { padding: 37px 0 0; background: var(--cream-deep); }
+  .theo-sec h2 { font-size: clamp(39.7px, 10.58vw, 58.2px); }   /* +15% */
+
+  .theo-stage {
+    display: flex; align-items: flex-end; gap: 8px; margin-top: 76px;
+    position: relative; z-index: 2; margin-bottom: -14px;
+  }
+  /* Blink-or-move: this one floats, so it does not blink. The aviator it
+     replaced did the opposite. This pose is 1.13 tall per unit width, near
+     enough the aviator's 1.07 to reuse its 54%. */
+  .theo-stage .disco { width: 54%; }
+  .theo-stage .disco img { width: 100%; }
+  /* The copy is in normal flow. The sky below is an absolutely-positioned layer
+     owned by .level that reaches UP over this section, so the copy needs its own
+     stacking position to stay on top of it. Theo sits at 2, between sky and copy. */
+  .theo-sec { position: relative; }
+  .theo-inner { position: relative; z-index: 3; }
+  .theo-stage .script-wrap { position: relative; display: block; width: 42%; margin-bottom: 86px; }
+  .theo-stage img.script { width: 100%; }
+  .theo-stage .script-heart { position: absolute; top: -19px; right: 4px; width: 18px; }
+
+  /* ---------- level up ---------- */
+  .level h2 { font-size: clamp(36px, 9.6vw, 52.8px); }
+  .level {
+    margin-top: 0; padding: 74px 0 44px;
+    /* half the artwork's height, derived from its own width rule, so the
+       painting below stops exactly at the art's waist. The fan is 1422x897
+       (aspect 0.631) and spans the wrap content box: 100vw - 48px, capped by
+       the wrap's own 640px max-width, so 592px of content. */
+    --half-art: min(calc(31.55vw - 15.1px), 187px);
+    /* how far the sky reaches UP into Meet Theo, and how long the cream takes
+       to hand over to it */
+    --sky-rise: 300px;
+    --sky-fade: 230px;
+  }
+  /* ONE sky, painted once, instead of a cream section patched into a pink one
+     with cloud overlays. sky-field.webp is the field art with its own sky
+     stacked above it as [sky | mirrored sky | field], so both internal joins are
+     either a mirror line or a repeated row and are therefore exactly continuous
+     (measured: median step 0, worst 5 across the full width). The mirror is cut
+     well ABOVE the treeline -- cutting at the horizon mirrors the trees
+     upside-down into the sky.
+     The layer reaches --sky-rise above .level into Meet Theo and the cream
+     gradient over its top hands the section's cream off into cloud. That is what
+     puts Theo IN the sky rather than on a seam, and it means there is no join to
+     hide: the cream simply becomes the sky. */
+  .level::before {
+    content: ""; position: absolute; z-index: 0;
+    top: calc(-1 * var(--sky-rise)); left: 0; right: 0;
+    height: calc(100% + var(--sky-rise) - 44px - var(--half-art));
+    background:
+      linear-gradient(to bottom, var(--cream-deep), rgba(246, 236, 216, 0) var(--sky-fade)),
+      #FDEAE6 url(images/web/sky-field.webp) center bottom / cover no-repeat;
+    border-radius: 0 0 18px 18px;
+  }
+  .level-inner { position: relative; z-index: 1; }
+  .level .icons { margin: 30px auto 0; width: 94%; }
+  .level .icon-labels {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    margin-top: 8px; text-align: center;
+    font-size: 11px; font-weight: 700; line-height: 1.25; color: var(--ink-soft);
+  }
+  /* drop-shadow follows the alpha, so this traces the fanned panels rather
+     than boxing the image. ONE layer, deliberately: stacked drop-shadows each
+     apply to the previous result, so two of them compound and read far heavier
+     than their numbers suggest. Short offset and a tight blur -- just enough
+     contact shadow to sit the panels on the meadow. */
+  .level .fan {
+    width: 100%; margin: 26px auto 0;
+    filter: drop-shadow(0 4px 6px rgba(51, 36, 26, 0.13));
+  }
+
+  @font-face { font-family: 'FrauncesSemi'; font-style: normal; font-weight: 600; src: url(data:font/woff2;base64,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) format('woff2'); font-display: swap; }
+  @font-face { font-family: 'DMSansCard'; font-style: normal; font-weight: 500; src: url(data:font/woff2;base64,d09GMgABAAAAAApQAA8AAAAAEtAAAAn1AAQBBgAAAAAAAAAAAAAAAAAAAAAAAAAAGkYbIBwqBmA/U1RBVFoAgSoRCAqXdJMFATYCJAOBJAtUAAQgBYRGByAbBA+zokZQUpoE/1UCT3ZeoxYgQSIYpgmKMskmHWiRdAoWD3vO1Vee4isvl2HBfg532PcDbuvfYGIUl9A3lRi1oEIpGdkX6AEqimLij47gef4P9b6XgaEg5kQLtmhsLbVc4BY4bJ3r+9Hc20zAzPs5QFTHsuqAA8coTFXX5gtTJMhu8p8YoAEVBDr3AgzZ+Xn3a3XD68Db3SFWEo3SKeXztztu+PB/H7Mh7lE18gjpiKLWPRIiJZAIJREJtWLfmi/dpMM8+bhUSz+Za4oCAqCPxVm6IUSJQKGIg4O69KA+A4hrM9qKhwTESGobRwD0+AWzJrJaR7PQBQUA/w+SYPYKONbiBk72VheAD0NYG60+v+gArJu+AhChi0G26UOSnhEHYrYSDDwAs+fkg/+nAPs1ZtQO+ew9mRg+ZGGZbACbyW60WOcXK3shXQDr+zOrSDcg/5ypgAixcGzkuFDm0gAo4hqQBfILmM/CimhCkKVp4IdQhDrNHoNBT0egmYzx8AuKS8pqWLRuzwG00aIMA+4zJs1Z/hazwf+Pvh2fjwfGfUb069OjQb06tSEApCwupyTDlchg0AKhgmlg3Yi9AdPRB4ADgOtywPplacRDAsQNmn75APUdwv35zP6Xtwvt7e2Ro5aevv5uQ9fw4BYu1pVR9KMEtw/lvczbiaIqHper826gtvC6uD19wZ2KX63UvjYN8Re/5QO/iyIvgIus1iRJJEQ2TVkZIwLXowzpvNbn2BhWYW84TyCVRuL3BKJ1t2wk7FkScvN6st2Fs83VvgkEEyj7zV/j5Q87VSSx7I6x4jh3PEomtK611MVqdNHcbLW2plTnqvTON5OWBX1jIU9NuMLbSZxgUvFQnYsmZfmIVMWLX/rym/unw+zSWNdhRnChDQY+x2b1EvviwmpLRxUYLlc9q/pLNSkNHlnQCy6NHUaSYIlXbTgNuzacjVTLzt+TYW/diE5cO47iGeFFZJLE9SRJvIuurXuP58dx6522sRoNZ83i4D6OAv/6qTU9Mze0nlhA0JtqmgXFb7HaNBusk40oBMGFxW0bczO2MhIvJzTYsD7Eo6zGkB0hw96bCK/4e8aFA1e2ESQPtTBysEj9cp0FA9Vr0LRtZoEbH1k0hmklbbBr1tvBpEXIWrpFSdPD7WS+4BQKWhaQHWpj1bh4s9csdh4XWNU3TBoWbszoDbow8Fa3hRGBQGLlDQAUvNTByjsImnrwxa2Y4A1e81u8ouAce33GByT5VfBWgG79WlpRuD5HcEbbr0JjWKUr8tajjN+UA+u+SXAEGUEEP7pz8tIUn+bx8+1Uxf7i+0lPEbFHRwz9p6G/yzm0kiPNh5/eP5yg+8NpblnwqPjfv0dFpb6r7r2caU0ujVHtdIZap2yyhV3ZzenEx/wk3wLrvdWTS6kLm3Ppi8/aMbt+/vLW+vKXFW883PTY9szm3GM0xsZnZ/fsqj8YU+y1vWsW2p9khMAZrt0zxPJyHekD0hDy8BofBHuTeMDv/3t8n52zGHY6bfpdc9bc0YLm4Qmv3+byehKHg05sxTxW9TU6CK+MVj/9AybfdlyYd2xamMyNOyz5GjXur9O2gmNWdPOiilt4F8Muc/i3nkslKSLqNJpKDSt8M/t8mp1+YRa+6h1NqZQBld4QqMh9B2vP1Cp1f+1ZyzrDFdzMVGiqPGYtdGbh4pePjPclMVsU72eva/wrfMHumyHfq/Ju5XVD96PyCzXlWt7oDs77ne1YxLk+7yvkiYAGT5hMeDygJUgZrIz/BCsTIb2gFVryutfiCXeb3kZox94Vbmrm7ABJ4z4cj9s1PO+xeemQP9Sc4Sb2noAR2e8pGnOuLfiDjhJxlKL2Qrk7Bp/94ROI8iSjUSRMJkWc0ZI6phpgXCgFW57RD5scbbe84XDDY2t6ezj95zB2Ihawq3wyPGAWW/GoT4FTb35ce9YVLKug4jQOe3wSypHTyL6R2a+9KKfMAffjjWEbYxS1Uy/vMywTSC0f48pTfxdhf/nYB8f7q8wzvOpUUtSsRS9zCk7/2Iem5RWtRp94Nx07yF0kiZTeQCRL1NhYkSKSBj2RKpKjCfok2oY3PZeD7uXFnx8H/ws1NRxdpM3OHKWbCKmqUsYRdOC/yoPGXoj8UfuDykt8YpFXIk6LxBk48PNNL3685589kc2Wu1+ovQD+7pb+KHMC0E5o9IpX/vzO1WXa4CpQuomguooFrIxFfirGGPtqPjRy6pAYu0xHDvYpGG3OHElOhNSQCxfjUL4i20I/qDCLHnc7nvS0lzxMsCWUa8mkey1vTuVV4nFHBI3TUNwnIJ4IvrdfOaQVf/vDK9AFm+POdjTqajd9BzidM1XnKU6HOJ1frWsXIB+CAnJWtm2/i/cl/gYO3BWVJZKeYh5XjgxdRG0SX+MOyN2byRdkGp0/q7Bn64mu4CRt1GheFG88e5gJZSQC8wDFFJWwuXGJfNzJLuQKvfsW9zs+dzyqGdXac/BPryNPEpWQpoYxLsau/HSEMfbX/ihxcjBfMMDL9/zeOO50OP706bt/h6tO/r06fzG250WLdjzWvLjeHz+9/y2b+VFg37f32iR57P7mufNw3nxj7GUo9e48tMxc1GxqgfKdOw8pB3yCEGjZHUVr0UPvmcvxIkW31VZyy39CyQNnRvaURs7ze+4Bm3DD6CrP7D4p4XYRHs1ISEfJAm6lxhgm2JO2g/csaGUP75UcMpoyMrtHWqBNQ6VRf1kOc6jELxT5JRKjSGiE7lzrZ/XyZ3DGC+xzZapg9z4crfK3axTKa36RV5yW7XW9z1unbds9QVe5qWaQkubVIp+J/ZM9JTsZdA7479/FsmH/5r2krv63Qu+vP3eLhjPx6UzsDDrfutjsLwDAB5fYIt14o2f8/5ezMnkKAAcrI3nuMvQOAmeLgfrWUqqOCPUy4t5GqdTl/yB7M6X3c5jYXoSuTpLqGLo3fxl092HAt43ssqV2eKP8/uLsIFV8yz85mjXCdQV0Kst+PP//qXKqofBP56zI1kk/bK3Dlt6ETNC2TvEEAOB1ak/pKddwceGS4hAAKjWdJnQshTymdf0u8rBpt4RXEJ8jQuwKR5YBjziyUV5qi6KOHexhOXAI4yyGdAE/ee7YDX1ZgAPGezlu1pXDqJAbH3d8kZ6cxadl0Z6WNUybsQqjR6EZv2g2AOuZfjHYk15asCJoMq1wy6y6aid5rNHMGS3LmB9ecLVVi1bYkUjTGiBfsxuRLLfMBwVKW4Y31U156ALKV5BqUFtdoGPVRGgskdc0rCXwtLppITVNGm5EoBzXRg6MhMxwlNEYjzqQx5P3azRtj0lBgCk8VdoEpe0ohNq+oKGrO0vzhEWrhlYhuQlrwvdSV3DV210/TaYZO4uQVbGAX3qrxCahbJZX/9+mBwAA) format('woff2'); font-display: swap; }
+  @font-face { font-family: 'DMSansCard'; font-style: normal; font-weight: 700; src: url(data:font/woff2;base64,d09GMgABAAAAAAVQAA8AAAAACYAAAAT4AAQBBgAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwqBmA/U1RBVFoAgQQRCAqHNIYLATYCJAM0CxwABCAFhDYHIBu0ByMR5ouzCOAvEnhD6h8tEZ4oQ1GMMViMCp1q9drVg8EKFoj3uUz8xxxBtEZWPbshIFRRgIqMCz9IRPU3lJdNWs/U2HUZVEyyQkFkCyh7eNH49Z7g85r//sn9D8A+NwDm/3J6x62J82MCWYi3Gxt7Z4HsZYVhggGNMbxAT2trODUNiFI3lh6NwOhp3+cziAECJQFJSEoIgeJqqi0GDh45UVE5FAgIFNdYUwlTXemV8zauVhUJG52n4emVQqTjqRQj+tXEbO2jDaUfNhoyZswQd9W1Lfv2/+dkf0VnHOPiv/QKdVUVQlEZKsrQUlqzdsP2KMqWJUs3RjGxbOO8lVFdUlh5tQVERaURgijLGJ1JUtSIxkuC3RJ9QW7t56sqK1NUXWNNNM8iS620xnobbSsQq86Sx+WeeOi+O2674ZorLjtfUN8aokBlEEqB6ihHtCaOAvJvyA85OYJjW0oVK9ouIncZ7uFi52/n4eHpC5G9q/XTJzD98SOENrbI+gGbeQ8t80PMHcC8iP/8GZv58gWhmfPXIf8yBB64MKeNbYoXY1uPXn1YYr1x5kxwQP7iUbD32KW6DSfuOe1TEnPd/x7yT+8CMH3ulYS8CEY7P35E+j34Yii6eNNT8QhZr5xY6Lb68efn1/2ipKiwZNOhQ48SP326F1xxOS/yzF1sveMwEfIvwfSrkmIEUCFkg50JLd525jPkn54FyVTers7d+eJLcX1+XWI/gulPz5AtKsrGNzkRwOMPr54FXJ3+LgxiqAQBBJo+hhAoqoDlqAyrQK2qmw5FXGpiXXZafB2XUTLlNDDE8FTHZWYIfM951RXe9TIH/ELZeREyZRSOq6rl2gkpuUXcmM6bU2WYG6OzNC1Echmb0utmBAe+DoVgLUGzb2EE1hLeHezlExgK4pGxn6b7TTn0cJ/SZOCYTE4DA0O25XsLvhGi3e5UaORvi1TqfpVfZQw10SDom7ZDlKZOEGcq46g4ZnVdUJV/ZqHg32nfGnlz4tFuF1de+rf31oZNjEmZQ/q15F7GvlA6iceS5ibSNJ5dTpL58fF3eTmVTZuIMUTUIrOb5f/l8jW5zOnchePIDt85b3IB+3ZJbCkfT84uSohu0AsXfXtSdJKw5ncUstd6Cwik7WXZQVOOePpYrU5YZnPtflFOGENRYTQtFOQK2vafyQHs2nDJSuDRpQ6M3ojXjq1OjPwBpIlmQbRRgX5X3DO59NGtxw6tO/RB9LFh/9n3ecQ7rLcXzgy0b+CZzh/Ant8CeRQe2evC3Dllev5dNMu+g2+3CSzh20ftNfp7/jl7LxSWQPArcRWCgBYrCMq/VKpuUFp8/K5JaqThOqbp2qeJWqbl+kcJ/dN87eOa/vFEnTRTRT8iUMpCRcxViNeWifn+KC0vhgfsIJT2ACRFvQSZlt6AXFU/gEK6R9IUVjl6akVRVWM8KKZkLHeUFSRBFTmxGVRXMnYzpYbicdyMgrOM9La1tPYL4kgqQVDY2iRQmgQFdd19gtxerr2pwasZM9DfyvViLBFs8f2WvjRC0y1tqGYD9XgD12Xx57iWTjE1t/O7+/uIxq7YWioyChNrXbyzMQEnyYR0TU6OJh1vr/bYVPg9KBtd3BS5pW3GYgEvkuFmC5fvp6+CxFPxeLJqrmE5lv62hrpOAXv0aFNJ0zrTVAJSpOvHPCz564JFeDPbKjvjFA==) format('woff2'); font-display: swap; }
+  @font-face { font-family: 'DMSansCard'; font-style: normal; font-weight: 800; src: url(data:font/woff2;base64,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) format('woff2'); font-display: swap; }
+
+  /* ---------- the games ---------- */
+  .games-sec { position: relative; padding: 40px 0 16px; overflow: hidden; }   /* was 60px; headline sits 20px higher */
+  .games-sec h2 { font-size: clamp(39.6px, 10.56vw, 58.1px); }
+  .games-copy { max-width: 640px; }
+  .hl { color: var(--rose); }   /* global: every headline highlight */
+  /* The card is BUILT at the app's native 324x480 with the app's own type and
+     spacing, then the whole thing is scaled by the marquee's own 0.342. That
+     is how GamesMarquee does it, and it is the only way nothing drifts out of
+     proportion. Gap and pace are the app's too (12pt, 8s per card). */
+  /* text-align:left is load-bearing: the shelf sits inside .pcgr, which centres
+     its text, and the cards are designed left-aligned. .pcgr-grid sets its own
+     so the loop cards were always fine either way. */
+  .shelf { --s: 0.4104; --cw: 324px; --ch: 480px; --gap: 12px; margin-top: 26px; text-align: left; }
+  .shelf-row { overflow: hidden; }
+  .shelf-row + .shelf-row { margin-top: var(--gap); }
+  .shelf-track { display: flex; width: max-content; animation: shelfdrift 40s linear infinite; }
+  .shelf-track.rev { animation-name: shelfdriftrev; }
+  @keyframes shelfdrift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes shelfdriftrev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .gslot {
+    flex: none; margin-right: var(--gap);
+    width: calc(var(--cw) * var(--s)); height: calc(var(--ch) * var(--s));
+    border-radius: calc(28px * var(--s));
+  }
+  .gcard {
+    width: var(--cw); height: var(--ch);
+    transform: scale(var(--s)); transform-origin: top left;
+    position: relative; background: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.08); border-radius: 28px; overflow: hidden;
+  }
+  .gcard-art { position: absolute; left: 0; right: 0; top: 0; height: 360px; transform: translateY(calc(var(--lift) * -1)); }
+  .gcard-art svg { display: block; width: 100%; height: 100%; }
+  .gcard-time {
+    position: absolute; top: 18px; left: 18px; z-index: 2;
+    background: rgba(255,255,255,0.92); border: 1px solid var(--t); color: var(--t);
+    border-radius: 99px; padding: 7px 16px; font-size: 12.5px; letter-spacing: 0.2px;
+    font-family: 'DMSansCard', sans-serif; font-weight: 500;
+  }
+  .gcard-foot { position: absolute; left: 20px; right: 20px; bottom: 28px; z-index: 2; display: flex; flex-direction: column; }
+  .gcard-eyebrow { font-family: 'DMSansCard', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 2.08px; text-transform: uppercase; color: var(--a); }
+  .gcard-title {
+    font-family: 'FrauncesSemi', 'Iowan Old Style', Georgia, serif; font-weight: 600;
+    letter-spacing: -0.4px; color: #211E18;
+  }
+  .gcard-row { display: flex; align-items: flex-end; gap: 12px; }
+  .gcard-hook { flex: 1; font-family: 'DMSansCard', sans-serif; font-size: 15px; line-height: 21px; color: #857C6E; font-weight: 500; }
+  .gcard-ctawrap { flex: none; padding-bottom: 4px; }
+  .gcard-cta { display: block; background: var(--c); color: #FFFFFF; border-radius: 99px; padding: 14px 24px; font-family: 'DMSansCard', sans-serif; font-size: 16px; font-weight: 700; white-space: nowrap; }
+
+  /* ---------- fun ---------- */
+  .fun { padding: 64px 0 12px; }
+  .fun h2 { font-size: clamp(36px, 9.6vw, 52.8px); }
+  .fun em { color: var(--rose); font-style: italic; }
+  .fun img { margin-top: 24px; }
+
+  /* ---------- cta ---------- */
+  .cta { padding: 56px 0 0; text-align: center; }
+  .cta .theo { width: min(72%, 340px); margin: 0 auto 6px; }
+  .cta h2 { font-size: clamp(34px, 9vw, 48px); }
+  .cta .badge-row { margin-top: 20px; }
+  footer {
+    margin-top: 56px; padding: 28px 24px 40px;
+    border-top: 1px solid rgba(51, 36, 26, 0.12);
+    text-align: center; font-size: 13px; color: var(--ink-soft);
+  }
+  footer img { width: 104px; margin: 0 auto 10px; }
+  .foot-links { display: flex; justify-content: center; gap: 22px; margin: 0 0 12px; }
+  .foot-links a { color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .foot-links a:hover { color: var(--ink); }
+
+  /* ---------- desktop ---------- */
+  @media (min-width: 820px) {
+    .wrap { max-width: 1060px; }
+    header { max-width: 1060px; padding-top: 28px; }
+
+    /* nav becomes a real row. The hamburger and its dropdown are one and the
+       same markup, so the dropdown is re-dressed as an inline list rather than
+       duplicated. `.menu.open` is matched too, otherwise a stray `open` class
+       left over from a resize would out-specify this and collapse it to block. */
+    .menu-btn { display: none; }
+    .menu, .menu.open {
+      display: flex; align-items: center; gap: 2px;
+      position: static; background: none; box-shadow: none;
+      padding: 0; min-width: 0;
+    }
+    .menu a { padding: 9px 13px; font-size: 15px; }
+    .menu a.dl {
+      background: var(--rose); color: #fff;
+      border-radius: 99px; padding: 10px 20px; margin-left: 12px;
+    }
+    .menu a.dl:hover { background: var(--rose); opacity: 0.88; }
+
+    /* hero sits on ONE centre axis. Left-aligned copy over a centred badge and
+       a centred phone was the thing that read as unfinished. */
+    .hero > .wrap { text-align: center; }
+    .hero .lede { max-width: 40ch; margin-left: auto; margin-right: auto; }
+    /* script tucks in beside the plane the way the mock has it, instead of
+       being flung to the far left by space-between across a 1060px row */
+    .plane-row { max-width: 1060px; padding: 0 24px; justify-content: flex-end; gap: 4px; }
+    .plane-row img.script { width: 18%; margin-bottom: 30px; }
+    .plane-row .plane { width: 26%; }
+    .hero-stage .phone { width: 300px; }
+    .hero-stage { --hills-gap: 150px; }
+    .phone-crop { height: 470px; }
+
+    .loud-inner { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 32px; }
+    /* in the mock the doodles run about three quarters of the page. Inside
+       the text column they only get a third, and there is no room to widen
+       toward Theo. So on desktop they span the whole grid instead, which puts
+       Theo up beside the headline the way the mock has it. */
+    .loud-inner > div:first-child { grid-row: 1; grid-column: 1; }
+    .loud-theo { grid-row: 1; grid-column: 2; }
+    /* stays inside the grid here: a 100vw item in a grid cell can force the
+       columns wider. Cancelling the wrap gutters gets the width without that. */
+    .loud-doodles {
+      grid-row: 2; grid-column: 1 / -1;
+      width: calc(100% + 48px); max-width: none; margin-left: -24px; margin-top: 2px;
+    }
+    .loud-clouds { grid-row: 3; grid-column: 1 / -1; }
+    .pcgr-grid { width: auto; margin-left: 0; padding: 0 0 12px; overflow-x: visible; }
+    .pcgr-dots { display: none; }
+    .tile { flex: 1 1 0; }
+
+    /* ---- the runaway phone ----
+       `.five-visual` is full-bleed on mobile (width:100vw). That has to be
+       undone here or `.phone-wrap`'s 69.3% resolves against the VIEWPORT
+       instead of its grid column: ~1000px wide at 1440, ~1400px at 1920, tall
+       enough to paint straight over the testimonials, Meet Theo, and the top
+       of Level Up. Three sections were invisible on desktop because of it. */
+    .five { padding-bottom: 104px; }
+    .five-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .five-visual { width: auto; margin-left: 0; height: auto; margin-top: 0; }
+    .phone-wrap { width: 72%; margin: 0; }
+    .five-script { right: 0; top: 34%; width: 26%; }
+    .five-strokes { right: 20%; top: -5%; width: 17%; }
+
+    .quote-list { flex-direction: row; }
+    .quote { flex: 1; flex-direction: column; }
+    .theo-inner { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 32px; }
+    .theo-stage { margin-bottom: 0; margin-top: 0; }
+    /* The fan carries real UI text at 1422px native. Dropped into a 445px
+       grid column it renders at 31% and none of it is readable, so the
+       two-column layout goes and the art gets the full width. */
+    .level-inner { display: block; text-align: center; }
+    .level-inner .lede { margin-left: auto; margin-right: auto; }
+    /* the icon row was 94% of a narrow grid column; stacked, that 94% is the
+       whole 1012px wrap and the icons balloon. Cap it. */
+    .level .icons { max-width: 470px; }
+    .level .icon-labels { max-width: 470px; margin-left: auto; margin-right: auto; }
+    .level { margin-top: 0; }   /* was 56px: the cream gap broke the cloud bank's run into the pink band */
+    .level .fan { margin-top: 30px; }
+    /* the field art is portrait (1202x1308). Covering a wide, short desktop
+       band from `center` crops to bare sky and throws the hills, trees and
+       house away; anchoring to the bottom keeps the landscape but then the
+       headline, lede and icon labels sit on busy meadow and stop reading. So
+       the same trick the hero uses (.stage-fade): a cream wash over the top
+       third, gone by the time the hills start. Once the field art is
+       regenerated wide, a plain `cover` will frame sky-over-hills on its own
+       and this wash can come back out. */
+    /* Theo peeking in over the testimonials, 75% up from 115px */
+    .peek-theo { width: 201px; top: -48px; }
+
+    /* the wide field art (1672x941) is desktop-only: its aspect suits a broad
+       band, and cropping it into the narrow mobile band would show a sliver.
+       Mobile keeps the portrait original. */
+    .level { --sky-rise: 340px; --sky-fade: 270px; }
+    .level::before {
+      height: calc(100% + var(--sky-rise));
+      background-image:
+        linear-gradient(to bottom, var(--cream-deep), rgba(246, 236, 216, 0) var(--sky-fade)),
+        url(images/web/sky-field-wide.webp);
+    }
+
+    /* game cards are built at 324px native and scaled by --s. The mobile 0.41
+       leaves them 133px wide on a laptop, which is smaller than they are on a
+       phone and far too small to read. */
+
+    .shelf { --s: 0.62; }
+  }
+
+  /* ---------- wide screens ----------
+     Copy capped at 1060 while the hero and Level Up bands run edge to edge
+     reads as a phone layout stranded in the middle of a monitor. */
+  @media (min-width: 1500px) {
+    .wrap, header, .plane-row { max-width: 1200px; }
+    .hero-stage .phone { width: 340px; }
+    .phone-crop { height: 520px; }
+    .five-inner { gap: 64px; }
+    .shelf { --s: 0.72; }
+  }
+</style>
+
+<header>
+  <img class="logo" src="images/web/logo.webp" alt="Sheepish. More love ahead.">
+  <button class="menu-btn" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('menu');var open=m.classList.toggle('open');this.setAttribute('aria-expanded',open);">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="menu" id="menu" onclick="this.classList.remove('open');document.querySelector('.menu-btn').setAttribute('aria-expanded','false');">
+    <a href="#how">How It Works</a>
+    <a href="#games">Games</a>
+    <a href="#couples">Real Couples</a>
+    <a href="#theo">Meet Theo</a>
+    <a class="dl" href="#download">Get the App</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="sky" aria-hidden="true">
+    <img class="sc sc1" src="images/web/sky-cloud-1.webp" alt="">
+    <img class="sc sc2" src="images/web/sky-cloud-2.webp" alt="">
+    <img class="sc sc3" src="images/web/sky-cloud-3.webp" alt="">
+    <img class="sc sc4" src="images/web/sky-cloud-4.webp" alt="">
+    <img class="sc sc5" src="images/web/sky-cloud-5.webp" alt="">
+    <img class="sc sc6" src="images/web/sky-cloud-6.webp" alt="">
+    <img class="sc sc7" src="images/web/sky-cloud-7.webp" alt="">
+  </div>
+  <div class="wrap">
+    <h1>Play Your Way Closer</h1>
+    <p class="lede">For couples that want to have fun going deep</p>
+  </div>
+  <div class="hero-stage">
+    <img class="stage-hills" src="images/web/hills.webp" alt="">
+    <div class="stage-fade"></div>
+    <div class="stage-curve"></div>
+    <div class="plane-row">
+      <img class="script" src="images/web/script-better.webp" alt="Better conversations, brighter days">
+      <span class="plane fly"><span class="blink bob" style="--blink-dur:5.2s"><img src="images/web/biplane.webp" alt="Theo the lamb flying a red biplane, drawing a heart in the sky"><img class="closed" src="images/web/biplane-blink.webp" alt="" aria-hidden="true"></span></span>
+    </div>
+    <div class="badge-row">
+      <a class="appstore" href="#" aria-label="Download on the App Store">
+        <span class="apple">&#63743;</span>
+        <span><small>Download on the</small>App Store</span>
+      </a>
+    </div>
+    <div class="phone-crop">
+      <img class="phone" src="images/web/phone-home.webp" alt="The Sheepish home screen with tonight's question and active threads">
+      <svg class="phone-wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="waveg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF4E6" stop-opacity="0.82"/><stop offset="0.5" stop-color="#FBF4E6" stop-opacity="1"/></linearGradient></defs><path d="M0,40 C360,88 720,0 1080,30 C1260,46 1380,22 1440,14 L1440,110 L0,110 Z" fill="#F6ECD8" opacity="0.65"/><path d="M0,68 C360,110 720,18 1080,52 C1260,68 1380,42 1440,34 L1440,110 L0,110 Z" fill="url(#waveg)"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="loud">
+  <div class="wrap loud-inner">
+    <div>
+      <h2>You love each other. Life just gets loud.</h2>
+      <p class="lede">Work. Kids. Errands. Screens. Somewhere in there, meaningful conversation gets pushed to tomorrow.</p>
+    </div>
+    <img class="loud-doodles" src="images/web/doodles.webp" alt="Three sketches: a mug with &ldquo;What did we used to talk about?&rdquo;, a pram with &ldquo;We should do something tonight&rdquo;, and a phone with &ldquo;How was your day? …again?&rdquo;">
+
+    <div class="loud-clouds" aria-hidden="true">
+      <img class="lc lc-l" src="images/web/cloud-cream.webp" alt="">
+      <img class="lc lc-r" src="images/web/cloud-cream.webp" alt="">
+    </div>
+    <div class="loud-theo">
+      <img class="script" src="images/web/script-small.webp" alt="Small moments, big impact">
+      <img class="loud-heart" src="images/web/heart.webp" alt="">
+      <span class="blink theo" style="--blink-dur:4.9s;--blink-delay:0.7s"><img src="images/web/theo-rest.webp" alt="Theo the lamb lying down and smiling"><img class="closed" src="images/web/theo-rest-blink.webp" alt="" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<section class="pcgr" id="games">
+  <div class="wrap">
+    <h2>Fifteen games engineered to <span class="hl">make depth fun</span>.</h2>
+    <p class="lede">Some make you laugh. Some make you think. All fifteen are built to start a conversation you would not have had otherwise.</p>
+  </div>
+  <div class="shelf">
+<div class="shelf-row"><div class="shelf-track"><div class="gslot"><div class="gcard" style="--a:#1AA85F;--t:#1A8F50;--c:#1AA85F">
+<span class="gcard-art" style="--lift:36px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="btlHalo"><stop offset="0%" stop-color="#1AA85F" stop-opacity=".16"/><stop offset="100%" stop-color="#1AA85F" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="28" rx="150" ry="115" fill="url(#btlHalo)"/>
+<g transform="translate(0 34)">
+<rect x="34" y="58" width="260" height="11" rx="5.5" fill="#E7EFE9"/>
+<rect x="34" y="106" width="260" height="11" rx="5.5" fill="#E7EFE9"/>
+<rect x="34" y="154" width="260" height="11" rx="5.5" fill="#E7EFE9"/>
+<circle cx="266" cy="63.5" r="16" fill="#FFF" stroke="#E5247E" stroke-width="4"/><circle cx="236" cy="111.5" r="16" fill="#FFF" stroke="#E5247E" stroke-width="4"/><circle cx="196" cy="159.5" r="16" fill="#FFF" stroke="#E5247E" stroke-width="4"/>
+<path d="M300 24l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#F6B6CE"/>
+<path d="M58 196l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#9FE0B8"/>
+<circle cx="44" cy="38" r="3" fill="#C9E8D4"/><circle cx="150" cy="28" r="3" fill="#F8C0D6"/>
+<circle cx="300" cy="186" r="3.5" fill="#F8C0D6"/><circle cx="120" cy="200" r="3" fill="#C9E8D4"/>
+<circle cx="120" cy="63.5" r="16" fill="#FFF" stroke="#1AA85F" stroke-width="4"/><circle cx="205" cy="111.5" r="16" fill="#FFF" stroke="#1AA85F" stroke-width="4"/><circle cx="95" cy="159.5" r="16" fill="#FFF" stroke="#1AA85F" stroke-width="4"/></g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Between the<br>Lines</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:165px">How well do you read each other?</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#8B5CF6;--t:#7A5BD0;--c:#8B5CF6">
+<span class="gcard-art" style="--lift:36px"><svg viewBox="0 0 331 300" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="ptHalo"><stop offset="0%" stop-color="#8B5CF6" stop-opacity=".26"/><stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="70" rx="140" ry="130" fill="url(#ptHalo)"/>
+<g transform="translate(0 26)">
+<circle cx="46" cy="104" r="5" fill="#8B5CF6" opacity=".5"/>
+<circle cx="284" cy="150" r="5" fill="#8B5CF6" opacity=".35"/>
+<text x="56" y="74" font-family="FrauncesSemi" font-weight="600" font-size="34" fill="#D8A24A">?!</text>
+<g transform="rotate(-7 200 92)">
+<rect x="96" y="47" width="176" height="104" rx="26" fill="rgba(139,92,246,0.22)"/>
+<rect x="96" y="40" width="176" height="104" rx="26" fill="#FFF" stroke="rgba(139,92,246,0.18)" stroke-width="2"/>
+<rect x="122" y="72" width="112" height="12" rx="6" fill="#B9A8F0"/>
+<rect x="122" y="98" width="76" height="12" rx="6" fill="#D9CFF7"/>
+</g>
+<g transform="rotate(6 144 212)">
+<rect x="64" y="173" width="160" height="94" rx="22" fill="rgba(139,92,246,0.22)"/>
+<rect x="64" y="166" width="160" height="94" rx="22" fill="#FFF" stroke="rgba(139,92,246,0.18)" stroke-width="2"/>
+<rect x="86" y="196" width="100" height="11" rx="5.5" fill="#B9A8F0"/>
+<rect x="86" y="220" width="64" height="11" rx="5.5" fill="#D9CFF7"/>
+</g>
+</g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:8px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:44px;line-height:43px">Plot Twist</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:170px">Fill the blanks, then read aloud.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#1AA85F;--t:#1A8F50;--c:#1AA85F">
+<span class="gcard-art" style="--lift:0px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="cqHalo"><stop offset="0%" stop-color="#1AA85F" stop-opacity=".17"/><stop offset="100%" stop-color="#1AA85F" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#cqHalo)"/>
+<g transform="translate(0 -10)">
+<path d="M292 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#9FE0B8"/>
+<circle cx="62" cy="46" r="3" fill="#C9E8D4"/><circle cx="284" cy="184" r="3.5" fill="#F8C0D6"/>
+<circle cx="150" cy="26" r="3" fill="#C9E8D4"/>
+<g transform="rotate(-14 165 189.6)">
+<rect x="126" y="74" width="86" height="120" rx="16" fill="#1AA85F" fill-opacity=".15"/>
+<rect x="122" y="70" width="86" height="120" rx="16" fill="#FFF" stroke="#1AA85F" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="138" y="94" width="54" height="6" rx="3" fill="#1AA85F" fill-opacity=".14"/>
+<rect x="138" y="108" width="36" height="6" rx="3" fill="#1AA85F" fill-opacity=".10"/></g>
+<g transform="rotate(14 165 189.6)">
+<rect x="126" y="74" width="86" height="120" rx="16" fill="#1AA85F" fill-opacity=".15"/>
+<rect x="122" y="70" width="86" height="120" rx="16" fill="#FFF" stroke="#1AA85F" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="138" y="94" width="54" height="6" rx="3" fill="#1AA85F" fill-opacity=".14"/>
+<rect x="138" y="108" width="36" height="6" rx="3" fill="#1AA85F" fill-opacity=".10"/></g>
+<rect x="126" y="74" width="86" height="120" rx="16" fill="#1AA85F" fill-opacity=".16"/>
+<rect x="122" y="70" width="86" height="120" rx="16" fill="#FFF" stroke="#1AA85F" stroke-opacity=".22" stroke-width="1.25"/>
+<text x="165" y="154" font-family="FrauncesSemi" font-size="62" font-weight="600" fill="#1AA85F" text-anchor="middle">?</text>
+<path d="M196 96l2.2 6 6 2.2-6 2.2-2.2 6-2.2-6-6-2.2 6-2.2z" fill="#D8A24A"/>
+</g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Connection<br>Questions</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:158px">Prompts that get you talking.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#E5247E;--t:#C01A66;--c:#E5247E">
+<span class="gcard-art" style="--lift:36px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="agHalo"><stop offset="0%" stop-color="#27C97A" stop-opacity=".20"/><stop offset="100%" stop-color="#27C97A" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="310" cy="20" rx="200" ry="180" fill="url(#agHalo)"/>
+<rect x="294" y="104" width="22" height="138" rx="11" fill="#AD7A4E"/>
+<circle cx="253" cy="50" r="57" fill="#27C97A"/><circle cx="322" cy="68" r="64" fill="#24A863"/>
+<circle cx="302" cy="16" r="72" fill="#2BAE69"/><circle cx="288" cy="90" r="48" fill="#108D51"/>
+<circle cx="268" cy="28" r="11" fill="#FF4D97"/><circle cx="326" cy="46" r="6" fill="#FCE3EE"/>
+<circle cx="296" cy="94" r="7" fill="#E05B8F"/><circle cx="242" cy="56" r="5" fill="#FCE3EE"/>
+<ellipse cx="168" cy="236" rx="182" ry="18" fill="#BCE6CB"/>
+<ellipse cx="116" cy="245" rx="150" ry="13" fill="#9AD8B2"/>
+<path d="M196 162l2.8 7.5 7.5 2.8-7.5 2.8-2.8 7.5-2.8-7.5-7.5-2.8 7.5-2.8z" fill="#9FE0B8"/>
+<circle cx="232" cy="180" r="3" fill="#BBE3C8"/><circle cx="38" cy="166" r="2.6" fill="#BBE3C8"/>
+<circle cx="30" cy="224" r="4" fill="#FF6B9A"/><circle cx="248" cy="224" r="4" fill="#F4C84B"/>
+<circle cx="236" cy="104" r="7" fill="#F8C0D6"/><circle cx="216" cy="122" r="6" fill="#FF6B9A"/>
+<circle cx="238" cy="130" r="4" fill="#FCE3EE"/><circle cx="200" cy="142" r="5" fill="#F39AB8"/>
+<g transform="translate(38 234) rotate(-5)"><rect x="-1.75" y="-47" width="3.5" height="47" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-47" r="9" fill="#F4708F"/><circle cx="0" cy="-47" r="4.5" fill="#F7A8BD"/></g><g transform="translate(68 234) rotate(-3)"><rect x="-1.75" y="-33.5" width="3.5" height="33.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-33.5" r="6.5" fill="#F4C84B"/><circle cx="0" cy="-33.5" r="3.2" fill="#F7DC8A"/></g><g transform="translate(104 234) rotate(-5)"><rect x="-1.75" y="-53" width="3.5" height="53" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-53" r="9" fill="#F39AB8"/><circle cx="0" cy="-53" r="4.5" fill="#F8C0D6"/></g><g transform="translate(138.5 234) rotate(-3)"><rect x="-1.75" y="-38.5" width="3.5" height="38.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-38.5" r="7.5" fill="#FF8A6B"/><circle cx="0" cy="-38.5" r="3.6" fill="#FFB59E"/></g><g transform="translate(170 234) rotate(-5)"><rect x="-1.75" y="-43.5" width="3.5" height="43.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-43.5" r="6.5" fill="#F4C84B"/><circle cx="0" cy="-43.5" r="3.2" fill="#F7DC8A"/></g><g transform="translate(199.5 234) rotate(-3)"><rect x="-1.75" y="-34" width="3.5" height="34" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-34" r="6" fill="#F39AB8"/><circle cx="0" cy="-34" r="3" fill="#F8C0D6"/></g><g transform="translate(229 234) rotate(-3)"><rect x="-1.75" y="-28.5" width="3.5" height="28.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-28.5" r="5.5" fill="#F4C84B"/><circle cx="0" cy="-28.5" r="2.8" fill="#F7DC8A"/></g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px">Appreciation Game</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:165px">Name what you see in each other.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#C2363B;--t:#C2363B;--c:#E5484D">
+<span class="gcard-art" style="--lift:26px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0 16)">
+<path d="M16 132 H118 L130 120 L140 132 L162 132 L172 150 L182 84 L192 170 L202 132 H224 L234 122 L244 132 H316" stroke="#E5484D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<g transform="translate(166 67.4) scale(1.33)"><path d="M12 21 C12 21 3 13.5 3 8.5 C3 5.5 5.5 3.5 8 4 C10 4.4 11.4 6 12 7 C12.6 6 14 4.4 16 4 C18.5 3.5 21 5.5 21 8.5 C21 13.5 12 21 12 21 Z" fill="#E5484D" fill-opacity=".18"/></g>
+<g transform="translate(172.6 74.3) scale(0.78)"><path d="M12 21 C12 21 3 13.5 3 8.5 C3 5.5 5.5 3.5 8 4 C10 4.4 11.4 6 12 7 C12.6 6 14 4.4 16 4 C18.5 3.5 21 5.5 21 8.5 C21 13.5 12 21 12 21 Z" fill="#E5484D"/></g>
+<path d="M292 84l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#F4A6A0"/>
+<circle cx="50" cy="96" r="3" fill="#F2B8B2"/><circle cx="296" cy="176" r="3.5" fill="#F2B8B2"/>
+</g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Check-in</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px">State of Us</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:165px">A pulse check on your bond.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#1AA85F;--t:#1A8F50;--c:#1AA85F">
+<span class="gcard-art" style="--lift:36px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="btlHalo"><stop offset="0%" stop-color="#1AA85F" stop-opacity=".16"/><stop offset="100%" stop-color="#1AA85F" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="28" rx="150" ry="115" fill="url(#btlHalo)"/>
+<g transform="translate(0 34)">
+<rect x="34" y="58" width="260" height="11" rx="5.5" fill="#E7EFE9"/>
+<rect x="34" y="106" width="260" height="11" rx="5.5" fill="#E7EFE9"/>
+<rect x="34" y="154" width="260" height="11" rx="5.5" fill="#E7EFE9"/>
+<circle cx="266" cy="63.5" r="16" fill="#FFF" stroke="#E5247E" stroke-width="4"/><circle cx="236" cy="111.5" r="16" fill="#FFF" stroke="#E5247E" stroke-width="4"/><circle cx="196" cy="159.5" r="16" fill="#FFF" stroke="#E5247E" stroke-width="4"/>
+<path d="M300 24l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#F6B6CE"/>
+<path d="M58 196l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#9FE0B8"/>
+<circle cx="44" cy="38" r="3" fill="#C9E8D4"/><circle cx="150" cy="28" r="3" fill="#F8C0D6"/>
+<circle cx="300" cy="186" r="3.5" fill="#F8C0D6"/><circle cx="120" cy="200" r="3" fill="#C9E8D4"/>
+<circle cx="120" cy="63.5" r="16" fill="#FFF" stroke="#1AA85F" stroke-width="4"/><circle cx="205" cy="111.5" r="16" fill="#FFF" stroke="#1AA85F" stroke-width="4"/><circle cx="95" cy="159.5" r="16" fill="#FFF" stroke="#1AA85F" stroke-width="4"/></g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Between the<br>Lines</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:165px">How well do you read each other?</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#8B5CF6;--t:#7A5BD0;--c:#8B5CF6">
+<span class="gcard-art" style="--lift:36px"><svg viewBox="0 0 331 300" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="ptHalo"><stop offset="0%" stop-color="#8B5CF6" stop-opacity=".26"/><stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="70" rx="140" ry="130" fill="url(#ptHalo)"/>
+<g transform="translate(0 26)">
+<circle cx="46" cy="104" r="5" fill="#8B5CF6" opacity=".5"/>
+<circle cx="284" cy="150" r="5" fill="#8B5CF6" opacity=".35"/>
+<text x="56" y="74" font-family="FrauncesSemi" font-weight="600" font-size="34" fill="#D8A24A">?!</text>
+<g transform="rotate(-7 200 92)">
+<rect x="96" y="47" width="176" height="104" rx="26" fill="rgba(139,92,246,0.22)"/>
+<rect x="96" y="40" width="176" height="104" rx="26" fill="#FFF" stroke="rgba(139,92,246,0.18)" stroke-width="2"/>
+<rect x="122" y="72" width="112" height="12" rx="6" fill="#B9A8F0"/>
+<rect x="122" y="98" width="76" height="12" rx="6" fill="#D9CFF7"/>
+</g>
+<g transform="rotate(6 144 212)">
+<rect x="64" y="173" width="160" height="94" rx="22" fill="rgba(139,92,246,0.22)"/>
+<rect x="64" y="166" width="160" height="94" rx="22" fill="#FFF" stroke="rgba(139,92,246,0.18)" stroke-width="2"/>
+<rect x="86" y="196" width="100" height="11" rx="5.5" fill="#B9A8F0"/>
+<rect x="86" y="220" width="64" height="11" rx="5.5" fill="#D9CFF7"/>
+</g>
+</g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:8px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:44px;line-height:43px">Plot Twist</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:170px">Fill the blanks, then read aloud.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#1AA85F;--t:#1A8F50;--c:#1AA85F">
+<span class="gcard-art" style="--lift:0px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="cqHalo"><stop offset="0%" stop-color="#1AA85F" stop-opacity=".17"/><stop offset="100%" stop-color="#1AA85F" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#cqHalo)"/>
+<g transform="translate(0 -10)">
+<path d="M292 30l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#9FE0B8"/>
+<circle cx="62" cy="46" r="3" fill="#C9E8D4"/><circle cx="284" cy="184" r="3.5" fill="#F8C0D6"/>
+<circle cx="150" cy="26" r="3" fill="#C9E8D4"/>
+<g transform="rotate(-14 165 189.6)">
+<rect x="126" y="74" width="86" height="120" rx="16" fill="#1AA85F" fill-opacity=".15"/>
+<rect x="122" y="70" width="86" height="120" rx="16" fill="#FFF" stroke="#1AA85F" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="138" y="94" width="54" height="6" rx="3" fill="#1AA85F" fill-opacity=".14"/>
+<rect x="138" y="108" width="36" height="6" rx="3" fill="#1AA85F" fill-opacity=".10"/></g>
+<g transform="rotate(14 165 189.6)">
+<rect x="126" y="74" width="86" height="120" rx="16" fill="#1AA85F" fill-opacity=".15"/>
+<rect x="122" y="70" width="86" height="120" rx="16" fill="#FFF" stroke="#1AA85F" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="138" y="94" width="54" height="6" rx="3" fill="#1AA85F" fill-opacity=".14"/>
+<rect x="138" y="108" width="36" height="6" rx="3" fill="#1AA85F" fill-opacity=".10"/></g>
+<rect x="126" y="74" width="86" height="120" rx="16" fill="#1AA85F" fill-opacity=".16"/>
+<rect x="122" y="70" width="86" height="120" rx="16" fill="#FFF" stroke="#1AA85F" stroke-opacity=".22" stroke-width="1.25"/>
+<text x="165" y="154" font-family="FrauncesSemi" font-size="62" font-weight="600" fill="#1AA85F" text-anchor="middle">?</text>
+<path d="M196 96l2.2 6 6 2.2-6 2.2-2.2 6-2.2-6-6-2.2 6-2.2z" fill="#D8A24A"/>
+</g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Connection<br>Questions</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:158px">Prompts that get you talking.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#E5247E;--t:#C01A66;--c:#E5247E">
+<span class="gcard-art" style="--lift:36px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="agHalo"><stop offset="0%" stop-color="#27C97A" stop-opacity=".20"/><stop offset="100%" stop-color="#27C97A" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="310" cy="20" rx="200" ry="180" fill="url(#agHalo)"/>
+<rect x="294" y="104" width="22" height="138" rx="11" fill="#AD7A4E"/>
+<circle cx="253" cy="50" r="57" fill="#27C97A"/><circle cx="322" cy="68" r="64" fill="#24A863"/>
+<circle cx="302" cy="16" r="72" fill="#2BAE69"/><circle cx="288" cy="90" r="48" fill="#108D51"/>
+<circle cx="268" cy="28" r="11" fill="#FF4D97"/><circle cx="326" cy="46" r="6" fill="#FCE3EE"/>
+<circle cx="296" cy="94" r="7" fill="#E05B8F"/><circle cx="242" cy="56" r="5" fill="#FCE3EE"/>
+<ellipse cx="168" cy="236" rx="182" ry="18" fill="#BCE6CB"/>
+<ellipse cx="116" cy="245" rx="150" ry="13" fill="#9AD8B2"/>
+<path d="M196 162l2.8 7.5 7.5 2.8-7.5 2.8-2.8 7.5-2.8-7.5-7.5-2.8 7.5-2.8z" fill="#9FE0B8"/>
+<circle cx="232" cy="180" r="3" fill="#BBE3C8"/><circle cx="38" cy="166" r="2.6" fill="#BBE3C8"/>
+<circle cx="30" cy="224" r="4" fill="#FF6B9A"/><circle cx="248" cy="224" r="4" fill="#F4C84B"/>
+<circle cx="236" cy="104" r="7" fill="#F8C0D6"/><circle cx="216" cy="122" r="6" fill="#FF6B9A"/>
+<circle cx="238" cy="130" r="4" fill="#FCE3EE"/><circle cx="200" cy="142" r="5" fill="#F39AB8"/>
+<g transform="translate(38 234) rotate(-5)"><rect x="-1.75" y="-47" width="3.5" height="47" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-47" r="9" fill="#F4708F"/><circle cx="0" cy="-47" r="4.5" fill="#F7A8BD"/></g><g transform="translate(68 234) rotate(-3)"><rect x="-1.75" y="-33.5" width="3.5" height="33.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-33.5" r="6.5" fill="#F4C84B"/><circle cx="0" cy="-33.5" r="3.2" fill="#F7DC8A"/></g><g transform="translate(104 234) rotate(-5)"><rect x="-1.75" y="-53" width="3.5" height="53" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-53" r="9" fill="#F39AB8"/><circle cx="0" cy="-53" r="4.5" fill="#F8C0D6"/></g><g transform="translate(138.5 234) rotate(-3)"><rect x="-1.75" y="-38.5" width="3.5" height="38.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-38.5" r="7.5" fill="#FF8A6B"/><circle cx="0" cy="-38.5" r="3.6" fill="#FFB59E"/></g><g transform="translate(170 234) rotate(-5)"><rect x="-1.75" y="-43.5" width="3.5" height="43.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-43.5" r="6.5" fill="#F4C84B"/><circle cx="0" cy="-43.5" r="3.2" fill="#F7DC8A"/></g><g transform="translate(199.5 234) rotate(-3)"><rect x="-1.75" y="-34" width="3.5" height="34" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-34" r="6" fill="#F39AB8"/><circle cx="0" cy="-34" r="3" fill="#F8C0D6"/></g><g transform="translate(229 234) rotate(-3)"><rect x="-1.75" y="-28.5" width="3.5" height="28.5" rx="1.75" fill="#5FB98A"/><circle cx="0" cy="-28.5" r="5.5" fill="#F4C84B"/><circle cx="0" cy="-28.5" r="2.8" fill="#F7DC8A"/></g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px">Appreciation Game</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:165px">Name what you see in each other.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#C2363B;--t:#C2363B;--c:#E5484D">
+<span class="gcard-art" style="--lift:26px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<g transform="translate(0 16)">
+<path d="M16 132 H118 L130 120 L140 132 L162 132 L172 150 L182 84 L192 170 L202 132 H224 L234 122 L244 132 H316" stroke="#E5484D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<g transform="translate(166 67.4) scale(1.33)"><path d="M12 21 C12 21 3 13.5 3 8.5 C3 5.5 5.5 3.5 8 4 C10 4.4 11.4 6 12 7 C12.6 6 14 4.4 16 4 C18.5 3.5 21 5.5 21 8.5 C21 13.5 12 21 12 21 Z" fill="#E5484D" fill-opacity=".18"/></g>
+<g transform="translate(172.6 74.3) scale(0.78)"><path d="M12 21 C12 21 3 13.5 3 8.5 C3 5.5 5.5 3.5 8 4 C10 4.4 11.4 6 12 7 C12.6 6 14 4.4 16 4 C18.5 3.5 21 5.5 21 8.5 C21 13.5 12 21 12 21 Z" fill="#E5484D"/></g>
+<path d="M292 84l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#F4A6A0"/>
+<circle cx="50" cy="96" r="3" fill="#F2B8B2"/><circle cx="296" cy="176" r="3.5" fill="#F2B8B2"/>
+</g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Check-in</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px">State of Us</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:165px">A pulse check on your bond.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div></div></div>
+<div class="shelf-row"><div class="shelf-track rev"><div class="gslot"><div class="gcard" style="--a:#1AA85F;--t:#0E8A50;--c:#1AA85F">
+<span class="gcard-art" style="--lift:25px"><svg viewBox="0 0 1104 940" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="jGlow"><stop offset="0%" stop-color="#1AA85F" stop-opacity=".30"/><stop offset="55%" stop-color="#1AA85F" stop-opacity=".12"/><stop offset="100%" stop-color="#1AA85F" stop-opacity="0"/></radialGradient></defs>
+<g transform="translate(0 125)">
+<path d="M 150 215 L 840 215 A 97.5 97.5 0 0 1 840 410 L 255 410 A 120 120 0 0 0 255 650 L 890 650" stroke="#D6EEE0" stroke-width="22" stroke-linecap="round" fill="none"/>
+<g fill="#FFF" stroke="#BEE0CB" stroke-width="8">
+<circle cx="270" cy="215" r="38"/><circle cx="525" cy="215" r="38"/><circle cx="780" cy="215" r="38"/>
+<circle cx="395" cy="410" r="38"/><circle cx="655" cy="410" r="38"/>
+<circle cx="375" cy="650" r="38"/><circle cx="615" cy="650" r="38"/></g>
+<circle cx="890" cy="650" r="78" fill="url(#jGlow)"/>
+<circle cx="890" cy="650" r="52" fill="#1AA85F" fill-opacity=".14"/>
+<circle cx="890" cy="650" r="46" fill="#FFF"/><circle cx="890" cy="650" r="32" fill="#1AA85F"/>
+<path d="M 1015 114 Q 1015 140 1041 140 Q 1015 140 1015 166 Q 1015 140 989 140 Q 1015 140 1015 114 Z" fill="#2E9D57"/>
+<path d="M 1032 528 Q 1032 548 1052 548 Q 1032 548 1032 568 Q 1032 548 1012 548 Q 1032 548 1032 528 Z" fill="#5FB97A"/>
+<path d="M 158 773 Q 158 795 180 795 Q 158 795 158 817 Q 158 795 136 795 Q 158 795 158 773 Z" fill="#5FB97A" fill-opacity=".9"/>
+<circle cx="200" cy="110" r="7" fill="#5FB97A"/><circle cx="126" cy="388" r="8" fill="#BDC5D6"/>
+<circle cx="424" cy="862" r="7" fill="#BDC5D6"/>
+</g></svg></span>
+<span class="gcard-time">15 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px">Journeys</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">Day-by-day paths for two.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#BE2020;--t:#BE2020;--c:#DC2626">
+<span class="gcard-art" style="--lift:46px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="fofHalo"><stop offset="0%" stop-color="#DC2626" stop-opacity=".15"/><stop offset="100%" stop-color="#DC2626" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#fofHalo)"/>
+<g transform="translate(0 18)">
+<g transform="rotate(-8 165 205)">
+<rect x="71" y="62" width="188" height="148" rx="18" fill="#DC2626" fill-opacity=".05" stroke="#DC2626" stroke-opacity=".16" stroke-width="1.25"/>
+<rect x="89" y="84" width="120" height="6" rx="3" fill="#DC2626" fill-opacity=".12"/></g>
+<g transform="rotate(8 165 205)">
+<rect x="71" y="62" width="188" height="148" rx="18" fill="#DC2626" fill-opacity=".05" stroke="#DC2626" stroke-opacity=".16" stroke-width="1.25"/>
+<rect x="89" y="84" width="120" height="6" rx="3" fill="#DC2626" fill-opacity=".12"/></g>
+<rect x="70" y="61" width="196" height="152" rx="18" fill="#DC2626" fill-opacity=".05"/>
+<rect x="67" y="58" width="196" height="152" rx="18" fill="#FFF" stroke="#DC2626" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="88" y="80" width="152" height="7" rx="3.5" fill="#DC2626" fill-opacity=".14"/>
+<rect x="88" y="98" width="120" height="7" rx="3.5" fill="#DC2626" fill-opacity=".11"/>
+<rect x="88" y="116" width="144" height="7" rx="3.5" fill="#DC2626" fill-opacity=".11"/>
+<g transform="rotate(-9 165 152)">
+<rect x="93" y="132" width="144" height="48" rx="10" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-opacity=".95"/>
+<rect x="98" y="137" width="134" height="38" rx="7" fill="none" stroke="#DC2626" stroke-width="1.2" stroke-opacity=".55"/>
+<text x="165" y="164" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="2" fill="#DC2626" fill-opacity=".96" text-anchor="middle">FICTION</text></g>
+<path d="M294 66l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#F2A7A0"/>
+<circle cx="48" cy="92" r="3" fill="#F2A7A0"/><circle cx="296" cy="198" r="3.5" fill="#F2C2BC"/>
+</g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Fact or<br>Fiction</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">True or false, beat the clock.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#DB4126;--t:#CC3F2B;--c:#F0533C">
+<span class="gcard-art" style="--lift:46px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="wkwHalo"><stop offset="0%" stop-color="#F0533C" stop-opacity=".15"/><stop offset="100%" stop-color="#F0533C" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#wkwHalo)"/>
+<g transform="translate(12 36)">
+<path d="M290 38l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#F6B6A6"/>
+<path d="M46 196l2.2 6 6 2.2-6 2.2-2.2 6-2.2-6-6-2.2 6-2.2z" fill="#9FE0B8"/>
+<circle cx="60" cy="48" r="3" fill="#F6C9BC"/><circle cx="284" cy="190" r="3.5" fill="#C9E8D4"/>
+<g transform="rotate(-7 125 199.6)">
+<rect x="70" y="50" width="112" height="150" rx="18" fill="#F0533C" fill-opacity=".13"/>
+<rect x="66" y="46" width="112" height="150" rx="18" fill="#FFF" stroke="#F0533C" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="84" y="68" width="62" height="7" rx="3.5" fill="#F0533C" fill-opacity=".14"/>
+<rect x="84" y="94" width="80" height="22" rx="11" fill="#F0533C" fill-opacity=".12"/>
+<circle cx="98" cy="105" r="6" fill="#F0533C"/>
+<rect x="84" y="126" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/>
+<rect x="84" y="158" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/></g>
+<g transform="rotate(5 203 211.6)">
+<rect x="148" y="62" width="112" height="150" rx="18" fill="#F0533C" fill-opacity=".13"/>
+<rect x="144" y="58" width="112" height="150" rx="18" fill="#FFF" stroke="#F0533C" stroke-opacity=".22" stroke-width="1.25"/>
+<rect x="162" y="80" width="62" height="7" rx="3.5" fill="#F0533C" fill-opacity=".14"/>
+<rect x="162" y="106" width="80" height="22" rx="11" fill="#F0533C" fill-opacity=".12"/>
+<circle cx="176" cy="117" r="6" fill="#F0533C"/>
+<rect x="162" y="138" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/>
+<rect x="162" y="170" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/></g>
+<circle cx="264" cy="178" r="21" fill="#FFF"/><circle cx="264" cy="178" r="21" fill="#1AA85F" fill-opacity=".12"/>
+<circle cx="264" cy="178" r="18" fill="#1AA85F"/>
+<path d="M256 178.5l5 5 11-12" stroke="#FFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Who Knows<br>Who</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">Guess their answers, then reveal.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#B5701B;--t:#B5701B;--c:#E0922E">
+<span class="gcard-art" style="--lift:26px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><linearGradient id="csSpot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0B84E" stop-opacity=".36"/><stop offset="1" stop-color="#F0B84E" stop-opacity="0"/></linearGradient></defs>
+<path d="M168 2 L52 216 L284 216 Z" fill="url(#csSpot)"/>
+<ellipse cx="168" cy="216" rx="128" ry="18" fill="#E0922E" fill-opacity=".10"/>
+<circle cx="168" cy="148" r="52" fill="#E0922E" fill-opacity=".10"/>
+<rect x="152" y="104" width="32" height="50" rx="16" fill="#E0922E"/>
+<line x1="159" y1="116" x2="177" y2="116" stroke="#FAF5EC" stroke-width="2.4" opacity=".7"/>
+<line x1="159" y1="125" x2="177" y2="125" stroke="#FAF5EC" stroke-width="2.4" opacity=".7"/>
+<line x1="159" y1="134" x2="177" y2="134" stroke="#FAF5EC" stroke-width="2.4" opacity=".7"/>
+<rect x="161" y="152" width="14" height="11" rx="3" fill="#E0922E"/>
+<rect x="165" y="161" width="6" height="46" rx="3" fill="#E0922E"/>
+<ellipse cx="168" cy="209" rx="28" ry="6" fill="#E0922E"/>
+<path d="M286 64l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#EAC07A"/>
+<path d="M52 150l2.4 6.5 6.5 2.4-6.5 2.4-2.4 6.5-2.4-6.5-6.5-2.4 6.5-2.4z" fill="#EAC07A"/>
+<circle cx="300" cy="150" r="3" fill="#E7C58E"/><circle cx="44" cy="78" r="3" fill="#E7C58E"/>
+</svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Center<br>Stage</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:158px">Act it out against the clock.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot"><div class="gcard" style="--a:#2456B8;--t:#2456B8;--c:#2F6BE0">
+<span class="gcard-art" style="--lift:26px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="clHalo"><stop offset="0%" stop-color="#2F6BE0" stop-opacity=".10"/><stop offset="100%" stop-color="#2F6BE0" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#clHalo)"/>
+<g transform="translate(11 26) scale(1.08)">
+<path d="M40 150l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#C9C2B4"/>
+<circle cx="286" cy="60" r="3.5" fill="#F3B0A8"/><circle cx="280" cy="196" r="3" fill="#AEC4F2"/>
+<circle cx="58" cy="44" r="3" fill="#F6CFA6"/>
+<g transform="rotate(7 200 58)">
+<rect x="153" y="38" width="100" height="46" rx="14" fill="#ED4C3C" fill-opacity=".10"/>
+<rect x="150" y="35" width="100" height="46" rx="14" fill="#FFF" stroke="#ED4C3C" stroke-width="2"/>
+<text x="200" y="66" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="1" fill="#ED4C3C" text-anchor="middle">BLUE</text></g>
+<g transform="rotate(-8 89 90)">
+<rect x="49" y="70" width="86" height="46" rx="14" fill="#2F6BE0" fill-opacity=".10"/>
+<rect x="46" y="67" width="86" height="46" rx="14" fill="#FFF" stroke="#2F6BE0" stroke-width="2"/>
+<text x="89" y="98" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="1" fill="#2F6BE0" text-anchor="middle">RED</text></g>
+<g transform="rotate(-3 155 156)">
+<rect x="95" y="135" width="126" height="48" rx="15" fill="#F0922E" fill-opacity=".10"/>
+<rect x="92" y="132" width="126" height="48" rx="15" fill="#FFF" stroke="#F0922E" stroke-width="2"/>
+<text x="155" y="164" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="1" fill="#F0922E" text-anchor="middle">GREEN</text></g>
+</g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px"><span style="color:#2F6BE0">Color</span> <span style="color:#ED4C3C">Lies</span></span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">Say the color, not the word.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#1AA85F;--t:#0E8A50;--c:#1AA85F">
+<span class="gcard-art" style="--lift:25px"><svg viewBox="0 0 1104 940" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="jGlow"><stop offset="0%" stop-color="#1AA85F" stop-opacity=".30"/><stop offset="55%" stop-color="#1AA85F" stop-opacity=".12"/><stop offset="100%" stop-color="#1AA85F" stop-opacity="0"/></radialGradient></defs>
+<g transform="translate(0 125)">
+<path d="M 150 215 L 840 215 A 97.5 97.5 0 0 1 840 410 L 255 410 A 120 120 0 0 0 255 650 L 890 650" stroke="#D6EEE0" stroke-width="22" stroke-linecap="round" fill="none"/>
+<g fill="#FFF" stroke="#BEE0CB" stroke-width="8">
+<circle cx="270" cy="215" r="38"/><circle cx="525" cy="215" r="38"/><circle cx="780" cy="215" r="38"/>
+<circle cx="395" cy="410" r="38"/><circle cx="655" cy="410" r="38"/>
+<circle cx="375" cy="650" r="38"/><circle cx="615" cy="650" r="38"/></g>
+<circle cx="890" cy="650" r="78" fill="url(#jGlow)"/>
+<circle cx="890" cy="650" r="52" fill="#1AA85F" fill-opacity=".14"/>
+<circle cx="890" cy="650" r="46" fill="#FFF"/><circle cx="890" cy="650" r="32" fill="#1AA85F"/>
+<path d="M 1015 114 Q 1015 140 1041 140 Q 1015 140 1015 166 Q 1015 140 989 140 Q 1015 140 1015 114 Z" fill="#2E9D57"/>
+<path d="M 1032 528 Q 1032 548 1052 548 Q 1032 548 1032 568 Q 1032 548 1012 548 Q 1032 548 1032 528 Z" fill="#5FB97A"/>
+<path d="M 158 773 Q 158 795 180 795 Q 158 795 158 817 Q 158 795 136 795 Q 158 795 158 773 Z" fill="#5FB97A" fill-opacity=".9"/>
+<circle cx="200" cy="110" r="7" fill="#5FB97A"/><circle cx="126" cy="388" r="8" fill="#BDC5D6"/>
+<circle cx="424" cy="862" r="7" fill="#BDC5D6"/>
+</g></svg></span>
+<span class="gcard-time">15 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Loops</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px">Journeys</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">Day-by-day paths for two.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#BE2020;--t:#BE2020;--c:#DC2626">
+<span class="gcard-art" style="--lift:46px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="fofHalo"><stop offset="0%" stop-color="#DC2626" stop-opacity=".15"/><stop offset="100%" stop-color="#DC2626" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#fofHalo)"/>
+<g transform="translate(0 18)">
+<g transform="rotate(-8 165 205)">
+<rect x="71" y="62" width="188" height="148" rx="18" fill="#DC2626" fill-opacity=".05" stroke="#DC2626" stroke-opacity=".16" stroke-width="1.25"/>
+<rect x="89" y="84" width="120" height="6" rx="3" fill="#DC2626" fill-opacity=".12"/></g>
+<g transform="rotate(8 165 205)">
+<rect x="71" y="62" width="188" height="148" rx="18" fill="#DC2626" fill-opacity=".05" stroke="#DC2626" stroke-opacity=".16" stroke-width="1.25"/>
+<rect x="89" y="84" width="120" height="6" rx="3" fill="#DC2626" fill-opacity=".12"/></g>
+<rect x="70" y="61" width="196" height="152" rx="18" fill="#DC2626" fill-opacity=".05"/>
+<rect x="67" y="58" width="196" height="152" rx="18" fill="#FFF" stroke="#DC2626" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="88" y="80" width="152" height="7" rx="3.5" fill="#DC2626" fill-opacity=".14"/>
+<rect x="88" y="98" width="120" height="7" rx="3.5" fill="#DC2626" fill-opacity=".11"/>
+<rect x="88" y="116" width="144" height="7" rx="3.5" fill="#DC2626" fill-opacity=".11"/>
+<g transform="rotate(-9 165 152)">
+<rect x="93" y="132" width="144" height="48" rx="10" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-opacity=".95"/>
+<rect x="98" y="137" width="134" height="38" rx="7" fill="none" stroke="#DC2626" stroke-width="1.2" stroke-opacity=".55"/>
+<text x="165" y="164" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="2" fill="#DC2626" fill-opacity=".96" text-anchor="middle">FICTION</text></g>
+<path d="M294 66l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#F2A7A0"/>
+<circle cx="48" cy="92" r="3" fill="#F2A7A0"/><circle cx="296" cy="198" r="3.5" fill="#F2C2BC"/>
+</g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Fact or<br>Fiction</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">True or false, beat the clock.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#DB4126;--t:#CC3F2B;--c:#F0533C">
+<span class="gcard-art" style="--lift:46px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="wkwHalo"><stop offset="0%" stop-color="#F0533C" stop-opacity=".15"/><stop offset="100%" stop-color="#F0533C" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#wkwHalo)"/>
+<g transform="translate(12 36)">
+<path d="M290 38l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#F6B6A6"/>
+<path d="M46 196l2.2 6 6 2.2-6 2.2-2.2 6-2.2-6-6-2.2 6-2.2z" fill="#9FE0B8"/>
+<circle cx="60" cy="48" r="3" fill="#F6C9BC"/><circle cx="284" cy="190" r="3.5" fill="#C9E8D4"/>
+<g transform="rotate(-7 125 199.6)">
+<rect x="70" y="50" width="112" height="150" rx="18" fill="#F0533C" fill-opacity=".13"/>
+<rect x="66" y="46" width="112" height="150" rx="18" fill="#FFF" stroke="#F0533C" stroke-opacity=".20" stroke-width="1.25"/>
+<rect x="84" y="68" width="62" height="7" rx="3.5" fill="#F0533C" fill-opacity=".14"/>
+<rect x="84" y="94" width="80" height="22" rx="11" fill="#F0533C" fill-opacity=".12"/>
+<circle cx="98" cy="105" r="6" fill="#F0533C"/>
+<rect x="84" y="126" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/>
+<rect x="84" y="158" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/></g>
+<g transform="rotate(5 203 211.6)">
+<rect x="148" y="62" width="112" height="150" rx="18" fill="#F0533C" fill-opacity=".13"/>
+<rect x="144" y="58" width="112" height="150" rx="18" fill="#FFF" stroke="#F0533C" stroke-opacity=".22" stroke-width="1.25"/>
+<rect x="162" y="80" width="62" height="7" rx="3.5" fill="#F0533C" fill-opacity=".14"/>
+<rect x="162" y="106" width="80" height="22" rx="11" fill="#F0533C" fill-opacity=".12"/>
+<circle cx="176" cy="117" r="6" fill="#F0533C"/>
+<rect x="162" y="138" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/>
+<rect x="162" y="170" width="80" height="22" rx="11" fill="#FFF" stroke="#F0533C" stroke-opacity=".14" stroke-width="1.25"/></g>
+<circle cx="264" cy="178" r="21" fill="#FFF"/><circle cx="264" cy="178" r="21" fill="#1AA85F" fill-opacity=".12"/>
+<circle cx="264" cy="178" r="18" fill="#1AA85F"/>
+<path d="M256 178.5l5 5 11-12" stroke="#FFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</g></svg></span>
+<span class="gcard-time">10 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Who Knows<br>Who</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">Guess their answers, then reveal.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#B5701B;--t:#B5701B;--c:#E0922E">
+<span class="gcard-art" style="--lift:26px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><linearGradient id="csSpot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0B84E" stop-opacity=".36"/><stop offset="1" stop-color="#F0B84E" stop-opacity="0"/></linearGradient></defs>
+<path d="M168 2 L52 216 L284 216 Z" fill="url(#csSpot)"/>
+<ellipse cx="168" cy="216" rx="128" ry="18" fill="#E0922E" fill-opacity=".10"/>
+<circle cx="168" cy="148" r="52" fill="#E0922E" fill-opacity=".10"/>
+<rect x="152" y="104" width="32" height="50" rx="16" fill="#E0922E"/>
+<line x1="159" y1="116" x2="177" y2="116" stroke="#FAF5EC" stroke-width="2.4" opacity=".7"/>
+<line x1="159" y1="125" x2="177" y2="125" stroke="#FAF5EC" stroke-width="2.4" opacity=".7"/>
+<line x1="159" y1="134" x2="177" y2="134" stroke="#FAF5EC" stroke-width="2.4" opacity=".7"/>
+<rect x="161" y="152" width="14" height="11" rx="3" fill="#E0922E"/>
+<rect x="165" y="161" width="6" height="46" rx="3" fill="#E0922E"/>
+<ellipse cx="168" cy="209" rx="28" ry="6" fill="#E0922E"/>
+<path d="M286 64l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#EAC07A"/>
+<path d="M52 150l2.4 6.5 6.5 2.4-6.5 2.4-2.4 6.5-2.4-6.5-6.5-2.4 6.5-2.4z" fill="#EAC07A"/>
+<circle cx="300" cy="150" r="3" fill="#E7C58E"/><circle cx="44" cy="78" r="3" fill="#E7C58E"/>
+</svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:40px;line-height:42px">Center<br>Stage</span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:158px">Act it out against the clock.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div><div class="gslot" aria-hidden="true"><div class="gcard" style="--a:#2456B8;--t:#2456B8;--c:#2F6BE0">
+<span class="gcard-art" style="--lift:26px"><svg viewBox="0 0 331 256" preserveAspectRatio="xMidYMid meet">
+<defs><radialGradient id="clHalo"><stop offset="0%" stop-color="#2F6BE0" stop-opacity=".10"/><stop offset="100%" stop-color="#2F6BE0" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="166" cy="30" rx="150" ry="115" fill="url(#clHalo)"/>
+<g transform="translate(11 26) scale(1.08)">
+<path d="M40 150l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#C9C2B4"/>
+<circle cx="286" cy="60" r="3.5" fill="#F3B0A8"/><circle cx="280" cy="196" r="3" fill="#AEC4F2"/>
+<circle cx="58" cy="44" r="3" fill="#F6CFA6"/>
+<g transform="rotate(7 200 58)">
+<rect x="153" y="38" width="100" height="46" rx="14" fill="#ED4C3C" fill-opacity=".10"/>
+<rect x="150" y="35" width="100" height="46" rx="14" fill="#FFF" stroke="#ED4C3C" stroke-width="2"/>
+<text x="200" y="66" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="1" fill="#ED4C3C" text-anchor="middle">BLUE</text></g>
+<g transform="rotate(-8 89 90)">
+<rect x="49" y="70" width="86" height="46" rx="14" fill="#2F6BE0" fill-opacity=".10"/>
+<rect x="46" y="67" width="86" height="46" rx="14" fill="#FFF" stroke="#2F6BE0" stroke-width="2"/>
+<text x="89" y="98" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="1" fill="#2F6BE0" text-anchor="middle">RED</text></g>
+<g transform="rotate(-3 155 156)">
+<rect x="95" y="135" width="126" height="48" rx="15" fill="#F0922E" fill-opacity=".10"/>
+<rect x="92" y="132" width="126" height="48" rx="15" fill="#FFF" stroke="#F0922E" stroke-width="2"/>
+<text x="155" y="164" font-family="DMSansCard" font-weight="800" font-size="23" letter-spacing="1" fill="#F0922E" text-anchor="middle">GREEN</text></g>
+</g></svg></span>
+<span class="gcard-time">5 min</span>
+<span class="gcard-foot" style="gap:6px">
+<span class="gcard-eyebrow">Pass &amp; play</span>
+<span class="gcard-title" style="font-size:42px;line-height:43px"><span style="color:#2F6BE0">Color</span> <span style="color:#ED4C3C">Lies</span></span>
+<span class="gcard-row"><span class="gcard-hook" style="max-width:160px">Say the color, not the word.</span><span class="gcard-ctawrap"><span class="gcard-cta">Play Together</span></span></span>
+</span>
+</div></div></div></div>
+  </div>
+</section>
+
+<div class="pcgr-merge" aria-hidden="true">
+  <img class="c-left" src="images/web/cloud-cream.webp" alt="">
+  <img class="c-right" src="images/web/cloud-cream.webp" alt="">
+  <img class="c-mid" src="images/web/cloud-cream-soft.webp" alt="">
+  <img class="c-mid-b" src="images/web/cloud-cream-soft.webp" alt="">
+</div>
+
+<section class="five" id="how">
+  <div class="wrap five-inner">
+    <div>
+      <h2>Five minutes can <span class="hl">change the tone</span> of a day.</h2>
+      <p class="lede">A simple way to connect, one small moment at a time.</p>
+      <div class="steps">
+        <div class="step"><span class="n">1</span><div><h4>Pick something</h4><p>Choose a game or question.</p></div></div>
+        <div class="step"><span class="n">2</span><div><h4>Answer separately</h4><p>Be honest. Have fun.</p></div></div>
+        <div class="step"><span class="n">3</span><div><h4>Reveal together</h4><p>See, compare, and laugh.</p></div></div>
+        <div class="step"><span class="n">4</span><div><h4>Feel closer</h4><p>More understanding. More love ahead.</p></div></div>
+      </div>
+    </div>
+    <div class="five-visual">
+      <span class="phone-wrap">
+        <img class="five-phone" src="images/web/phone-appreciation.webp" alt="A phone showing the appreciation game: Hannah sent you an appreciation">
+        <img class="five-strokes" src="images/web/strokes-green.webp" alt="" aria-hidden="true">
+      </span>
+      <img class="five-script" src="images/web/script-choosing.webp" alt="Keep choosing each other">
+    </div>
+  </div>
+  <div class="five-wave"><svg viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="waveg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6ECD8" stop-opacity="0.55"/><stop offset="0.55" stop-color="#F6ECD8" stop-opacity="1"/></linearGradient></defs><path d="M0 74 C240 94 440 70 640 44 C800 24 900 48 1080 26 C1240 8 1360 2 1440 0 L1440 110 L0 110 Z" fill="#EDDFC4" opacity="0.55"/><path d="M0 92 C240 112 440 88 640 62 C800 42 900 66 1080 44 C1240 24 1360 16 1440 10 L1440 110 L0 110 Z" fill="url(#waveg3)"/></svg></div>
+</section>
+
+<section class="quotes" id="couples">
+  <span class="blink peek-theo" style="--blink-dur:5.4s;--blink-delay:1.9s"><img src="images/web/theo-peek.webp" alt="Theo the lamb peeking in from the right edge"><img class="closed" src="images/web/theo-peek-blink.webp" alt="" aria-hidden="true"></span>
+  <div class="wrap">
+    <h2>Turns out,<br><span class="hl">five minutes</span> is plenty.</h2>
+    <p class="lede">Couples are finding deeper conversations and a stronger tomorrow.</p>
+    <div class="quote-list">
+      <div class="quote">
+        <span class="avatar" style="background:#4C7A5C;">CE</span>
+        <div>
+          <blockquote>&ldquo;My husband cried the first time we played the appreciation game. When your love bank isn&rsquo;t full it&rsquo;s hard to appreciate your partner. The prompts in this game really help get your brain thinking and get your heart involved.&rdquo;</blockquote>
+          <div class="who">Caitlin Elise</div>
+          <div class="meta">Married 5 years</div>
+        </div>
+      </div>
+      <div class="quote">
+        <span class="avatar" style="background:#B98A2F;">JP</span>
+        <div>
+          <blockquote>&ldquo;I like how the games make connecting not heavy&hellip; the quiz game makes you pause and think about who your spouse really is.&rdquo;</blockquote>
+          <div class="who">John P.</div>
+          <div class="meta">Married 4 years</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="theo-sec" id="theo">
+  <div class="wrap theo-inner">
+    <div>
+      <h2>Serious about relationships. <span class="hl">Not serious</span> all the time.</h2>
+      <p class="lede">Meet Theo, your wing-lamb. Here to cheer you on, keep things fun, and remind you that the best relationships are built with both intention and joy.</p>
+    </div>
+    <div class="theo-stage">
+      <span class="bob disco"><img src="images/web/theo-disco.webp" alt="Theo the lamb sitting on a gold mirrorball in sunglasses, throwing a peace sign"></span>
+      <span class="script-wrap">
+        <img class="script" src="images/web/script-team.webp" alt="Same team, bigger adventures">
+        <img class="script-heart" src="images/web/heart.webp" alt="" aria-hidden="true">
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="level">
+  <div class="wrap level-inner">
+    <div>
+      <h2>Level up together.</h2>
+      <p class="lede">Earn points. Unlock badges. Send thoughtful gifts. Little reasons to keep showing up for each other.</p>
+      <img class="icons" src="images/web/icons-row.webp" alt="" aria-hidden="true">
+      <div class="icon-labels">
+        <span>Connection points</span><span>Streaks</span><span>Coins</span><span>Levels</span><span>Gifts</span>
+      </div>
+    </div>
+    <img class="fan" src="images/web/level-fan.webp" alt="Five panels from the app: a 35 day streak with its calendar, the levels ladder showing Level 11 Anchor, connection points earned this month, achievement badges, and coins and gifts">
+  </div>
+</section>
+
+<section class="games-sec" id="games-all">
+  <div class="wrap games-copy">
+    <h2>Play. Chat. Grow. Repeat.</h2>
+    <p class="lede">A simple loop the two of you will actually look forward to.</p>
+  </div>
+  <div class="pcgr-grid" onscroll="var t=this.querySelector('.tile');var i=Math.round(this.scrollLeft/(t.offsetWidth+14));var d=this.parentNode.querySelectorAll('.pcgr-dots span');for(var j=0;j<d.length;j++){d[j].classList.toggle('on',j===i);}">
+    <div class="tile play">
+      <svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4C8A55" d="M7 6h10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.3 2.1L14.5 15h-5l-1.2 1.6A3.5 3.5 0 0 1 2 14.5V11a5 5 0 0 1 5-5Z"/><path fill="#EAF6E6" d="M7.2 9.2h1.6v1.6h1.6v1.6H8.8V14H7.2v-1.6H5.6v-1.6h1.6V9.2Z"/><circle fill="#EAF6E6" cx="16" cy="11" r="1"/><circle fill="#EAF6E6" cx="18.4" cy="12.8" r="1"/></svg>
+      <h3>Play</h3>
+      <p>Fifteen playful games engineered to spark laughter and honest answers.</p>
+      <img src="images/web/card-play.webp" alt="Game cards for Between the Lines and Plot Twist">
+    </div>
+    <div class="tile chat">
+      <svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#D8577E" d="M12 3.5c5.2 0 9.5 3.4 9.5 7.6 0 4.2-4.3 7.6-9.5 7.6-.9 0-1.8-.1-2.6-.3L5 20.5l.9-3.3c-1.9-1.4-3.4-3.5-3.4-6.1 0-4.2 4.3-7.6 9.5-7.6Z"/><circle fill="#FBE7EA" cx="8" cy="11.1" r="1.2"/><circle fill="#FBE7EA" cx="12" cy="11.1" r="1.2"/><circle fill="#FBE7EA" cx="16" cy="11.1" r="1.2"/></svg>
+      <h3>Chat</h3>
+      <p>Every game ends in a private thread made for just the two of you.</p>
+      <img src="images/web/card-chat.webp" alt="A private thread between partners">
+    </div>
+    <div class="tile grow">
+      <svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4C8A55" d="M12 21v-8"/><rect fill="#4C8A55" x="11.3" y="11" width="1.4" height="10" rx="0.7"/><path fill="#3E7C4F" d="M12 12C12 7.5 8.9 5 4.5 5c0 4.5 3.1 7 7.5 7Z"/><path fill="#6FA86F" d="M12 12c0-4.5 3.1-7 7.5-7 0 4.5-3.1 7-7.5 7Z"/></svg>
+      <h3>Grow</h3>
+      <p>Uncover childhood stories, quirks, dreams, and goals, one round at a time.</p>
+      <img src="images/web/card-grow.webp" alt="The Our Journey checklist: The Foundation, Our Goals, The Money System, Parenting Playbook">
+    </div>
+    <div class="tile repeat">
+      <svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E8823C" d="M12 22c-4.1 0-7-2.7-7-6.4 0-2.6 1.5-4.6 2.9-6.4C9.2 7.6 10.4 6 10.4 4c0-.8-.1-1.4-.3-2 3.3 1 8.9 5.4 8.9 11.6 0 3.7-2.9 6.4-7 6.4Z"/><path fill="#F6C288" d="M12 21c-2 0-3.4-1.3-3.4-3.2 0-1.4.9-2.4 1.7-3.4.7-.8 1.3-1.6 1.4-2.6 1.6 1 3.7 2.9 3.7 5.6 0 2.3-1.4 3.6-3.4 3.6Z"/></svg>
+      <h3>Repeat</h3>
+      <p>Keep your streak alive and turn five-minute moments into momentum.</p>
+      <img src="images/web/card-streak.webp" alt="A 34-day streak card with Theo peeking over the top">
+    </div>
+  </div>
+  <div class="pcgr-dots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+</section>
+
+<section class="cta" id="download">
+  <div class="wrap">
+    <span class="blink theo" style="--blink-dur:5.6s;--blink-delay:2.4s"><img src="images/web/theo-heart.webp" alt="Theo the lamb holding a heart in a field of flowers"><img class="closed" src="images/web/theo-heart-blink.webp" alt="" aria-hidden="true"></span>
+    <h2>More love ahead.</h2>
+    <div class="badge-row">
+      <a class="appstore" href="#" aria-label="Download on the App Store">
+        <span class="apple">&#63743;</span>
+        <span><small>Download on the</small>App Store</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="images/web/logo.webp" alt="Sheepish">
+  <nav class="foot-links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="support.html">Support</a>
+  </nav>
+  <div>&copy; 2026 Sheepish. All rights reserved.</div>
+</footer>
